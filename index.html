@@ -24,22 +24,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="ul-navbar">
                 <li class="nav-item" id="item-navbar">
-                    <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                    <a class="nav-link active" aria-current="page" id="navbar-link" href="#">INICIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">0km</a>
+                    <a class="nav-link active" aria-current="page" id="navbar-link" href="#">0km</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link active" aria-current="page">usados</a>
+                    <a href="" class="nav-link active" id="navbar-link" aria-current="page">usados</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link active" aria-current="page">Planes</a>
+                    <a href="" class="nav-link active"id="navbar-link" aria-current="page">Planes</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link active" aria-current="page">¿Quienes Somos?</a>
+                    <a href="" class="nav-link active"id="navbar-link" aria-current="page">¿Quienes Somos?</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link active" aria-current="page">Novedades</a>
+                    <a href="" class="nav-link active" id="navbar-link" aria-current="page">Novedades</a>
                 </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -58,8 +58,8 @@
             <img src="/multimedia/0km-acceso.png" class="card-img-top" alt="AUTOS-0KM" id="access-img">
         </a>
         <div class="card-body">
-        <h5 class="card-title fs-2" id="card-h">COMPRÁ TU AUTO 0KM</h5>
-        <p class="card-text fs-5 fw-normal" id="card-p">ENCONTRÁ EL AUTO DE TU MARCA PREFERIDA</p>
+        <h4 class="card-h">COMPRÁ TU 0KM</h4>
+        <p class="card-p">ENCONTRÁ EL AUTO DE TU MARCA PREFERIDA</p>
         </div>
     </div>
     <div class="card text-center border-light text-bg-dark" id="access-card">
@@ -67,8 +67,8 @@
             <img src="/multimedia/usados.png" class="card-img-top" alt="AUTOS USADOS" id="access-img">
         </a>
         <div class="card-body">
-        <h5 class="card-title fs-2" id="card-h">COMPRA/VENTA DE AUTOS USADOS</h5>
-        <p class="card-text fs-5 fw-normal" id="card-p">COMPRÁ O VENDÉ AUTOS USADOS Y CON GARANTÍA</p>
+        <h5 class="card-h">AUTOS USADOS</h5>
+        <p class="card-p">COMPRÁ O VENDÉ AUTOS USADOS Y CON GARANTÍA</p>
         </div>
     </div>
     <div class="card text-center border-light text-bg-dark"id="access-card">
@@ -76,8 +76,8 @@
             <img src="/multimedia/financiamiento.png" class="card-img-top" alt="AUTOS-0KM" id="access-img">
         </a>
         <div class="card-body">
-        <h5 class="card-title fs-2" id="card-h">PLANES DE FINANCIAMIENTO</h5>
-        <p class="card-text fs-5 fw-normal" id="card-p">CONONCÉ LOS PLANES QUE TENEMOS PARA VOS</p>
+        <h5 class="card-h" >FINANCIAMIENTO</h5>
+        <p class="card-p">CONONCÉ LOS PLANES QUE TENEMOS PARA VOS</p>
         </div>
     </div>
 </section>
@@ -95,7 +95,7 @@
                 <div class="ingresos-box">
                     <a href="#" target="_blank">
                         <img src="/multimedia/sandero.jpg" alt="RENAULT SANDERO" class="ingresos-img">
-                        <h3>Renault Sandero</h3>
+                        <h3 class="ingreso-h">Renault Sandero</h3>
                     </a>
                 </div>
             </article>
@@ -103,11 +103,78 @@
                 <div class="ingresos-box">
                     <a href="#" target="_blank">
                         <img src="/multimedia/versa.jpg" alt="NISSAN VERSA" class="ingresos-img">
-                        <h3>NISSAN VERSA</h3>
+                        <h3 class="ingreso-h">NISSAN VERSA</h3>
                     </a>
                 </div>
             </article>
+            <div class="btn-ingresos-wrapper">
+                <button type="button" class="btn btn-outline-light btn-lg" id="btn-ingresos">Explorar 0km</button>
+            </div>
+        </section>
+        <h2 id="titulo-seccion">ÚLTIMOS USADOS INGRESADOS</h2>
+        <section class="seccion-usados">
+            <article class="usado-ingreso">
+                <div class="usados-box">
+                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <img src="/multimedia/palio.jpg" alt="FIAT PALIO" class="ingresos-img">
+                        <h3 class="ingreso-h">FIAT PALIO</h3>
+                    </a>
+                </div>
+            </article>
+            <article class="usado-ingreso">
+                <div class="usados-box">
+                    <a href="#" target="_blank">
+                        <img src="/multimedia/ford-fiesta-usado.jpg" alt="FORD FIESTA" class="ingresos-img">
+                            <h3 class="ingreso-h">FORD FIESTA</h3>
+                        </img>
+                    </a>
+                </div>
+            </article>
+            <div class="btn-ingresos-wrapper">
+                <button type="button" class="btn btn-outline-light btn-lg" id="btn-ingresos">Explorar usados</button>
+            </div>
         </section>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
+    <!--SECCION FOOTER (PIE DE PÁGNIA)-->
+    <footer class="footer">
+        <nav class="footer-navbar">
+            <div class="footer-line"></div>
+                <a class="navbar-brand" href="#">
+                    <img src="/multimedia/Luxury-motors.png" alt="LUXURY-MOTORS" srcset="" id="footer-img">
+                </a>
+            <ul class="footer-list">
+                <li class="list-section">
+                    <h4 class="footer-h">AUTOS</h4>
+                    <ul>
+                        <li class="list-item"><a href="#" target="_blank" class="list-link">AUTOS USADOS</a></li>
+                        <li class="list-item"><a href="#"  target="_blank" class="list-link">AUTOS 0KM</a></li>
+                    </ul>
+                </li>
+                <li class="list-section">
+                    <h4 class="footer-h">ASESORAMIENTO</h4>
+                    <ul>
+                        <li class="list-item"><a href="" class="list-link">FINANCIAMIENTO</a></li>
+                        <li class="list-item"><a href="" class="list-link">POSVENTA</a></li>
+                    </ul>
+                </li>
+                <li class="list-section">
+                    <h4 class="footer-h">LUXURY-MOTORS</h4>
+                    <ul>
+                        <li class="list-item"><a href="" class="list-link">NOSOTROS</a></li>
+                        <li class="list-item"><a href="" class="list-link">¿DONDE ENCONTRARNOS?</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="footer-redes">
+                <h4 class="footer-redes-h">NUESTRAS REDES</h4>
+                <li class="footer-redes-li">
+                    <a href="#" class="footer-redes-link"><img src="/multimedia/instagram.png" alt="INSTAGRAM LOGO" class="footer-redes-img"></a>
+                    <a href="#" class="footer-redes-link"><img src="/multimedia/facebook.png" alt="FACEBOOK LOGO" class="footer-redes-img"></a>
+                    <a href="#" class="footer-redes-link"><img src="/multimedia/whastapp.png" alt="WHATTSAPP LOGO" class="footer-redes-img"></a>
+                </li>
+            </ul>
+            <div class="footer-line"></div>
+        </nav>
+    </footer>
 </html>
