@@ -325,7 +325,7 @@ input[type="checkbox"]{
             max-width: none;
         }
         #main-title{
-            color:#ffffff;
+            color:#fff;
             font-size: 3.8rem;
             width: 85rem;
             padding: 1rem;
@@ -643,6 +643,117 @@ input[type="checkbox"]{
         .btn-acordeon{
             font-size: 1em;
         }
+        /*FICHAS TÉCNICAS*/
+        .ficha-titulo{
+            margin-top: 10rem;
+            text-align: center;
+            color: #fff;
+            font-size: 6rem;
+        }
+        .carrusel-imagenes{
+            margin-left: 18rem;
+            width: 80rem;
+            margin-top: 1rem;
+            max-width: none;
+            height: 35rem;
+        }
+        .carrusel-img-box{
+            width: 45rem;
+            height: 35rem;
+            margin-left: 15.1rem;
+        }
+        .carrusel-img{
+            justify-content: center;
+        }
+        .carrusel-btn{
+            background-color: #fff6;
+            border:1px solid #fff;
+            height: 35rem;
+            max-height: none;
+            width: 15rem;
+        }
+        .form-container{
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: #686D76;
+            width: 35rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .form-container h2,p{
+            text-align: center;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        .form-container p{
+            font-size: 1.5em;
+        }
+        .form-input, .form-textarea{
+            width: 30rem;
+            margin-left: 2rem;
+            border: 1px solid black;
+            letter-spacing: 1px;
+            font-size: 1.2em;
+            height: auto;
+            max-width: auto;
+        }
+        .form-label{
+            color: #fff;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            text-decoration: underline;
+            margin-left: 2rem;
+        }
+        .form-btn{
+            text-align: center;
+            margin-left: 12rem;
+            width: 10rem;
+            max-width: auto;
+            height: 3rem;
+            max-height: auto;
+            font-size: 1.4em;
+            letter-spacing: 2px;
+        }
+        .ficha-container{
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #686D76;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+        .ficha-container h2{
+            text-align: center;
+            color: #fff;
+            padding: 1rem;
+            font-size: 3em;
+            text-decoration: underline;
+            letter-spacing: 2px;
+        }
+        .table{
+            border-radius: 10px;
+            font-size: 1.6em;
+            border: 1px solid #ddd;
+        }
+        .table tr{
+            width: 15rem;
+            background-color: transparent;
+        }
+        .table th{
+            letter-spacing: 3px;
+            color: #fff;
+            font-weight: 300;
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+        }
+        .table td{
+            background-color: transparent;
+            letter-spacing: 3px;
+            color: #fff;
+        }
+        .img-mobile-box{
+            display: none;
+        }
     }
 @media (min-width:300px) and (max-width:999px){
     /*PONIENDO CADA SECCION DEL INDEX EN GRID*/
@@ -931,5 +1042,113 @@ input[type="checkbox"]{
         }
         .btn-acordeon{
             font-size: 1em;
+        }
+        /*FICHA-TECNICA*/
+        .ficha-titulo{
+            margin-top: 5rem;
+            text-align: center;
+            color: #fff;
+            font-size: 2.1em;
+        }
+        .carrusel-imagenes{
+            display: none;
+        }
+        .galeria-mobile{
+            background-color: #686D76;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .galeria-mobile img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .galeria-mobile h3{
+            text-align: center;
+            letter-spacing: 2px;
+            color: #fff;
+            padding: 5px;
+            text-decoration: underline;
+            font-size: 1.4em;
+        }
+        .form-container{
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: #686D76;
+            width: 15rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .form-container h2,p{
+            text-align: center;
+            color: #fff;
+            letter-spacing: 1.5px;
+        }
+        .form-container p{
+            font-size: 1.2em;
+        }
+        .form-input, .form-textarea{
+            width: auto;
+            margin-left: 1rem;
+            border: 1px solid black;
+            letter-spacing: 1px;
+            font-size: 1em;
+            height: auto;
+            max-width: auto;
+        }
+        .form-label{
+            color: #fff;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            text-decoration: underline;
+            margin-left: 1rem;
+        }
+        .form-btn{
+            text-align: center;
+            margin-left: 3rem;
+            width: 5rem;
+            max-width: auto;
+            height: 2rem;
+            max-height: auto;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+        }
+        .ficha-container{
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #686D76;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+        .ficha-container h2{
+            text-align: center;
+            color: #fff;
+            padding: 1rem;
+            font-size: 2em;
+            text-decoration: underline;
+            letter-spacing: 2px;
+        }
+        .table{
+            border-radius: 10px;
+            font-size: 1.2em;
+            border: 1px solid #ddd;
+        }
+        .table tr{
+            width: 10rem;
+            background-color: transparent;
+        }
+        .table th{
+            letter-spacing: 3px;
+            color: #fff;
+            font-weight:normal;
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+        }
+        .table td{
+            background-color: transparent;
+            letter-spacing: 3px;
+            color: #fff;
         }
 }
