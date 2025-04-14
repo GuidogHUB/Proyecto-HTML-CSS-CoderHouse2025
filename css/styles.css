@@ -293,6 +293,214 @@ input[type="checkbox"]{
         width: 35px;
         max-width: none;
     }
+            /*CATÁLOGOS*/
+            .seccion-catalogo{
+                margin: 0;
+                display: grid;
+                grid-template-columns: 25rem 1fr;
+                gap: 2rem;
+                padding: 0 1rem 1rem 0;
+            }
+            .main-h{
+                margin: 20vh auto 0 auto;
+                font-size: 3.5rem;
+                color: #fff;
+                width: 70rem;
+                padding: auto;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            .filtros-busqueda{
+                width: 20rem;
+                max-width: auto;
+                overflow-y: auto;
+                padding-right: 10px;
+                padding: 1.5rem;
+                background-color:#686D76;
+                border: 1px solid #fff;
+                position: sticky;
+                top: 0;
+                gap: 3rem;
+                height: 100vh;
+                margin-left:0;
+            }
+            .filtros-busqueda h3{
+                text-align: center;
+                font-size: 1.8rem;
+                color: #fff;
+                text-decoration:underline;
+            }
+            .filtro{
+                margin-bottom: 2rem;
+            }
+            .filtro h4{
+                margin-bottom: 0.5rem;
+                font-size: 1.5em;
+                padding-bottom: 0.3rem;
+                text-align: center;
+                text-decoration: underline;
+            }
+            #label-filtro{
+                font-size: 1.3em;
+            }
+            .seccion-cards{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 1rem;
+            }
+            .card-box{
+                width: 16rem;
+                max-width: none;
+                height: 26rem;
+            }
+            .carta-catalogo{
+                flex: 1 1 250px;
+                width: 15rem;
+                max-width: none;
+                height: 25rem;
+                margin-left: 0;
+                max-height: none;
+                border-radius: 10px;
+                text-align: center;
+            }
+            .carta-catalogo a{
+                text-decoration: none;
+                color: #000;
+            }
+            .card-img{
+                border-radius: 10px 10px 0px 0px;
+                border-bottom: 2px solid #000;
+            }
+            .titulo-carta{
+                font-size: 1.4em;
+                letter-spacing: 2px;
+            }
+            .card-list{
+                height: 136px;
+                margin-left: 20px;
+                text-align: start;
+                max-height: none;
+                padding: 20px;
+            }
+            .card-list-item{
+                font-size: 1.3em;
+                letter-spacing: 2px;
+            }
+            .btn-acordeon{
+                font-size: 0.8em;
+            }
+            /*FICHAS TÉCNICAS*/
+            .ficha-titulo{
+                margin-top: 10rem;
+                text-align: center;
+                color: #fff;
+                font-size: 6rem;
+            }
+            .carrusel-imagenes{
+                margin-left: 5rem;
+                width: 70rem;
+                margin-top: 1rem;
+                max-width: none;
+                height: 35rem;
+            }
+            .carrusel-img-box{
+                width: 25rem;
+                height: 35rem;
+                margin-left: 10rem;
+            }
+            .carrusel-img{
+                justify-content: center;
+            }
+            .carrusel-btn{
+                background-color: #fff6;
+                border:1px solid #fff;
+                height: 35rem;
+                max-height: none;
+                width: 10rem;
+            }
+            .form-container{
+                border: 1px solid #ddd;
+                padding: 1rem;
+                border-radius: 10px;
+                background-color: #686D76;
+                width: 35rem;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+            .form-container h2,p{
+                text-align: center;
+                color: #fff;
+                letter-spacing: 2px;
+            }
+            .form-container p{
+                font-size: 1.5em;
+            }
+            .form-input, .form-textarea{
+                width: 30rem;
+                margin-left: 2rem;
+                border: 1px solid black;
+                letter-spacing: 1px;
+                font-size: 1.2em;
+                height: auto;
+                max-width: auto;
+            }
+            .form-label{
+                color: #fff;
+                font-size: 1.5em;
+                letter-spacing: 2px;
+                text-decoration: underline;
+                margin-left: 2rem;
+            }
+            .form-btn{
+                text-align: center;
+                margin-left: 12rem;
+                width: 10rem;
+                max-width: auto;
+                height: 3rem;
+                max-height: auto;
+                font-size: 1.4em;
+                letter-spacing: 2px;
+            }
+            .ficha-container{
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                background-color: #686D76;
+                margin-top: 2rem;
+                padding: 1rem;
+            }
+            .ficha-container h2{
+                text-align: center;
+                color: #fff;
+                padding: 1rem;
+                font-size: 3em;
+                text-decoration: underline;
+                letter-spacing: 2px;
+            }
+            .table{
+                border-radius: 10px;
+                font-size: 1.6em;
+                border: 1px solid #ddd;
+            }
+            .table tr{
+                width: 15rem;
+                background-color: transparent;
+            }
+            .table th{
+                letter-spacing: 3px;
+                color: #fff;
+                font-weight: 300;
+                border-bottom: 1px solid #ddd;
+                background-color: transparent;
+            }
+            .table td{
+                background-color: transparent;
+                letter-spacing: 3px;
+                color: #fff;
+            }
+            .img-mobile-box{
+                display: none;
+            }
 }
 @media(min-width:1400px){
         /*BODY,NAVBAR Y CONTENIDO MAIN*/
