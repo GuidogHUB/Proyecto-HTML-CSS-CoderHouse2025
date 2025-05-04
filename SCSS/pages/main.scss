@@ -1,0 +1,60 @@
+@use '../base/variables.scss' as *;
+
+body{
+    @include main-font;
+    @include bg-color;
+}
+
+/*INDEX.HTML*/
+.header-menu{
+    background-color: #fff4;
+}
+.label-busqueda{
+    color: #ffffff;
+    font-size: 25px;
+}
+.list-link:hover{
+    color: blue;
+}
+#navbar-link:hover{
+    color: blue;
+}
+#busqueda-titulo{
+    color: #ffffff;
+}
+#titulo-seccion{
+    color: #ffffff;
+}
+#search-text{
+    border: 1px solid black;
+}
+#main-title{
+    color:#ffffff;
+}
+.box{
+    background-color: #e1d14395;
+}
+#label-busq{
+    color: #fff;
+}
+/*SECCION 0KM INGRESOS*/
+.ingresos-box{
+    background-color: #fff;
+}
+.ingresos-box a {
+    color: #000;
+}
+.ingresos-img{
+    background-color: transparent;
+}
+/*SECCION-USADOS-INGRESOS*/
+.usado-ingreso{
+    text-align: center;
+}
+.usados-box{
+    background-color: #fff;
+}
+.usados-box a{
+    text-decoration: none;
+    color: #000;
+}

@@ -1,0 +1,1250 @@
+@use '../base/variables' as *;
+/*MEDIA QUERIES*/
+@media(min-width:1000px) and (max-width:1399px){
+    /*BODY,NAVBAR Y CONTENIDO MAIN*/
+    body{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        flex: 1;
+    }
+    #main-title{
+        font-size: 2.5rem;
+        padding: 1rem 1rem 1rem 1rem;
+        margin: 15vh 0vw 3vh 5vw;
+        letter-spacing: 0.2em;
+        text-align: center;
+    }
+    #txt-busqueda{
+        max-width: 25rem;
+        min-height: 2.5em;
+        border-radius: 12px;
+        font-size: 1.2em;
+        border: 1px solid black;
+    }
+    .box{
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+    .seccion-busqueda{
+        @include flex-wrap;
+        max-width: 50rem;
+        height: auto;
+        margin: 5vh 0vw 5vh 25vw;
+        padding: 4vh 2vw 4vh 2vw;
+        justify-content: space-between;
+    }
+    #busqueda-titulo{
+        text-align: center;
+        padding: 1rem 1rem 1rem 1rem;
+        font-size: 3.2em;
+        letter-spacing: 0.2em;
+        margin: 5vh 0vw 5vh 5vw;
+    }
+    #navbar-img{
+        max-width: 5rem;
+    }
+    #navbar-menu{
+        font-size: 1.4rem;
+        height: 5rem;
+    }
+    #ul-navbar{
+        margin:0vh 0vw 0vh 10vw;
+        padding: 1vh 1vw 1vh 1vw;
+        max-width: 43rem;
+        gap: 0.5rem;
+        justify-content: space-between;
+    }
+    #search-text{
+        width: 23rem;
+        height: auto;
+    }
+    .seccion-accesos-rapidos{
+        @include flex-wrap;
+        min-width: 15rem;
+        max-width: 65rem;
+        height: auto;
+        margin:5vh 0vw 5vh 12vw;
+        justify-content: space-between;
+    }
+    #access-card{
+        width: 20rem;
+        height: auto;
+        border-radius: 20px;
+    }
+    #access-img{
+        max-width: 11.5rem;
+        height: auto;
+    }
+    .card-h{
+        font-size: 2.5rem;
+        letter-spacing: 0.3rem;
+    }
+    .card-p{
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+    }
+    #titulo-seccion{
+        text-align: center;
+        padding: 1rem 1rem 1rem 1rem;
+        font-size: 3.2em;
+        letter-spacing: 0.2em;
+        margin: 5vh 0vw 5vh 5vw;
+    }
+    #label-busq{
+        margin: 1vh 1vw 1vh 0.5vw;
+        letter-spacing: 0.3rem;
+    }
+    /*SECCION 0KM INGRESOS*/
+    .seccion-nuevos{
+        @include flex-wrap;
+        gap: 1.5rem;
+        margin:3vh 0vw 2vh 1vw;
+    }
+    .nuevo-ingreso{
+        text-align: center;
+        font-size: 18px;
+    }
+    .ingresos-box{
+        border-radius: 20px;
+    }
+    .ingresos-box a {
+        text-decoration: none;
+        letter-spacing: 3px;
+    }
+    .ingresos-img{
+        border-radius: 20px;
+    }
+    #btn-nuevos{
+        margin: 0vh 0vw 2vh 45vw;
+        padding: 0.9rem;
+    }
+    /*SECCION-USADOS-INGRESOS*/
+    .seccion-usados{
+        @include flex-wrap;
+        gap: 1.5rem;
+        margin:3vh 0vw 5vh 1vw;
+    }
+    .usados-box{
+        border-radius: 20px;
+    }
+    .btn-ingresos-wrapper{
+        width: 100%;
+        height: 3rem;
+        text-align: center;
+    }
+    #btn-ingresos{
+        width: 13rem;
+        font-size: 1.5em;
+    }
+    /*SECCION FOOTER*/
+    .footer{
+        min-width: 100%;
+        margin:0;
+        padding: 1rem;
+    }
+    .footer-navbar{
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+        @include flex-wrap;
+        padding: 1rem;
+    }
+    .footer-list{
+        list-style: none;
+        padding: 0;
+        margin: 0 0 0 2rem;
+        @include flex-wrap;
+        width: 45rem;
+    }
+    .list-section{
+        min-width: 150px;
+        flex: 1 1 100px;
+        padding: 0;
+        margin-right: 0rem;
+    }
+    .list-section ul{
+        padding: 0;
+        margin: 0.5rem 0 0 0;
+    }
+    .list-item{
+        margin-bottom: 0.4rem;
+    }
+    .list-link{
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+    #footer-img{
+        max-width: 8rem;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-h{
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    }
+    .footer-line{
+        padding: 1px;
+        margin-bottom: 10px;
+    }
+    .footer-redes{
+        width: 22rem;
+    }
+    .footer-redes-li{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        max-width: none;
+        height: auto;
+        width: 18rem;
+        padding: 0 1rem 1rem 1rem;
+        margin-left: 20px;
+    }
+    .footer-redes-h{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .footer-redes-img{
+        width: 35px;
+        max-width: none;
+    }
+            /*CATÁLOGOS*/
+            .seccion-catalogo{
+                margin: 0;
+                display: grid;
+                grid-template-columns: 25rem 1fr;
+                gap: 2rem;
+                padding: 0 1rem 1rem 0;
+            }
+            .main-h{
+                margin: 20vh auto 0 auto;
+                font-size: 3.5rem;
+                width: 70rem;
+                padding: auto;
+                letter-spacing: 2px;
+            }
+            .filtros-busqueda{
+                width: 20rem;
+                max-width: auto;
+                overflow-y: auto;
+                padding-right: 10px;
+                padding: 1.5rem;
+                position: sticky;
+                top: 0;
+                gap: 3rem;
+                height: 100vh;
+                margin-left:0;
+            }
+            .filtros-busqueda h3{
+                font-size: 1.8rem;
+            }
+            .filtro{
+                margin-bottom: 2rem;
+            }
+            .filtro h4{
+                margin-bottom: 0.5rem;
+                font-size: 1.5em;
+                padding-bottom: 0.3rem;
+            }
+            #label-filtro{
+                font-size: 1.3em;
+            }
+            .seccion-cards{
+                @include flex-wrap;
+                flex-direction: row;
+                gap: 1rem;
+            }
+            .card-box{
+                width: 16rem;
+                max-width: none;
+                height: 26rem;
+            }
+            .carta-catalogo{
+                flex: 1 1 250px;
+                width: 15rem;
+                max-width: none;
+                height: 25rem;
+                margin-left: 0;
+                max-height: none;
+                border-radius: 10px;
+            }
+            .carta-catalogo a{
+                text-decoration: none;
+                color: #000;
+            }
+            .titulo-carta{
+                font-size: 1.4em;
+                letter-spacing: 2px;
+            }
+            .card-list{
+                height: 136px;
+                margin-left: 20px;
+                text-align: start;
+                max-height: none;
+                padding: 20px;
+            }
+            .card-list-item{
+                font-size: 1.3em;
+                letter-spacing: 2px;
+            }
+            .btn-acordeon{
+                font-size: 0.8em;
+            }
+            /*FICHAS TÉCNICAS*/
+            .ficha-titulo{
+                margin-top: 10rem;
+                font-size: 6rem;
+            }
+            .carrusel-imagenes{
+                margin-left: 5rem;
+                width: 70rem;
+                margin-top: 1rem;
+                max-width: none;
+                height: 35rem;
+            }
+            .carrusel-img-box{
+                width: 25rem;
+                height: 35rem;
+                margin-left: 10rem;
+            }
+            .carrusel-img{
+                justify-content: center;
+            }
+            .carrusel-btn{
+                background-color: #fff6;
+                border:1px solid #fff;
+                height: 35rem;
+                max-height: none;
+                width: 10rem;
+            }
+            .form-container{
+                border: 1px solid #ddd;
+                background-color: #686D76;
+                width: 35rem;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+            .form-container h2,p{
+                text-align: center;
+                color: #fff;
+                letter-spacing: 2px;
+            }
+            .form-container p{
+                font-size: 1.5em;
+            }
+            .form-input, .form-textarea{
+                width: 30rem;
+                margin-left: 2rem;
+                letter-spacing: 1px;
+                font-size: 1.2em;
+                height: auto;
+                max-width: auto;
+            }
+            .form-label{
+                font-size: 1.5em;
+                letter-spacing: 2px;
+                margin-left: 2rem;
+            }
+            .form-btn{
+                text-align: center;
+                margin-left: 12rem;
+                width: 10rem;
+                max-width: auto;
+                height: 3rem;
+                max-height: auto;
+                font-size: 1.4em;
+                letter-spacing: 2px;
+            }
+            .ficha-container{
+                border-radius: 10px;
+                margin-top: 2rem;
+                padding: 1rem;
+            }
+            .ficha-container h2{
+                text-align: center;
+                color: #fff;
+                padding: 1rem;
+                font-size: 3em;
+                text-decoration: underline;
+                letter-spacing: 2px;
+            }
+            .table{
+                border-radius: 10px;
+                font-size: 1.6em;
+                border: 1px solid #ddd;
+            }
+            .table tr{
+                width: 15rem;
+                background-color: transparent;
+            }
+            .table th{
+                letter-spacing: 3px;
+                color: #fff;
+                font-weight: 300;
+                border-bottom: 1px solid #ddd;
+                background-color: transparent;
+            }
+            .table td{
+                background-color: transparent;
+                letter-spacing: 3px;
+                color: #fff;
+            }
+            .img-mobile-box{
+                display: none;
+            }
+}
+@media(min-width:1400px){
+    /*BODY,NAVBAR Y CONTENIDO MAIN*/
+    body{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    #navbar-img{
+        max-width: 7rem;
+    }
+    #navbar-menu{
+        font-size: 2rem;
+        height: 5rem;
+        padding:3.5rem 0 3.5rem 0;
+    }
+    #ul-navbar{
+        margin:0vh 0vw 0vh 10vw;
+        padding: 1vh 1vw 1vh 1vw;
+        width: 50rem;
+        max-width: none;
+        gap: 1.5rem;
+        justify-content: space-around;
+    }
+    #search-text{
+        width: 30rem;
+        font-size: 1.3rem;
+        height: auto;
+        max-width: none;
+    }
+    #main-title{
+        color:#fff;
+        font-size: 3.8rem;
+        width: 85rem;
+        padding: 1rem;
+        margin: 18vh 0vw 0vh 15vw;
+        letter-spacing: 0.2em;
+        text-align: center;
+    }
+    .seccion-accesos-rapidos{
+        @include flex-wrap;
+        width: 90rem;
+        max-width: none;
+        height: auto;
+        gap: 2.8rem;
+        margin:5vh 0vw 5vh 13vw;
+        padding: 3rem;
+        justify-content: space-around;
+    }
+    #access-card{
+        width: 25rem;
+        height: 26rem;
+        border-radius: 20px;
+        text-align: end;
+    }
+    #access-img{
+        max-width: 13rem;
+        height: auto;
+    }
+    .card-h{
+        font-size: 2.8rem;
+        letter-spacing: 0.3rem;
+    }
+    .card-p{
+        font-size: 1.7rem;
+        margin: 2rem 0 0 0;
+        letter-spacing: 0.2rem;
+    }
+    #txt-busqueda{
+        max-width: none;
+        width: 27rem;
+        height: auto;
+        border-radius: 12px;
+        font-size: 1.6em;
+        border: 1px solid black;
+    }
+    .box{
+        background-color: #e1d14395;
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+    .seccion-busqueda{
+        @include flex-wrap;
+        width: 50rem;
+        max-width: none;
+        height: auto;
+        margin: 5vh 0vw 5vh 25vw;
+        padding: 1.5rem;
+        justify-content: space-around;
+    }
+    #busqueda-titulo{
+        text-align: center;
+        padding: 1rem 1rem 1rem 1rem;
+        font-size: 3.8em;
+        letter-spacing: 0.2em;
+        margin: 3vh 0vw 5vh 0vw;
+    }
+    #titulo-seccion{
+        text-align: center;
+        padding: 1rem;
+        font-size: 3.8em;
+        letter-spacing: 0.2em;
+        margin: 3vh 0vw 5vh 0vw;
+    }
+    #label-busq{
+        margin: 1vh 1vw 1vh 0.5vw;
+        letter-spacing: 0.3rem;
+        color: #fff;
+    }
+    /*SECCION 0KM INGRESOS*/
+    .seccion-nuevos{
+        @include flex-wrap;
+        gap: 2rem;
+        margin:1vh 0vw 1vh 5vw;
+    }
+    .nuevo-ingreso{
+        text-align: center;
+    }
+    .ingresos-box{
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    .ingresos-box a {
+        text-decoration: none;
+        color: #000;
+    }
+    .ingreso-h{
+        font-size: 2em;
+    }
+    .ingresos-img{
+        border-radius: 20px;
+        background-color: transparent;
+    }
+    /*SECCION-USADOS-INGRESOS*/
+    .seccion-usados{
+        @include flex-wrap;
+        gap: 2rem;
+        margin:1vh 0vw 1vh 5vw;
+    }
+    .usado-ingreso{
+        text-align: center;
+    }
+    .usados-box{
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    .usados-box a{
+        text-decoration: none;
+        color: #000;
+    }
+    .btn-ingresos-wrapper{
+        width: 100%;
+        height: 5rem;
+        text-align: center;
+    }
+    #btn-ingresos{
+        width: 15rem;
+        font-size: 1.8em;
+    }
+    /*SECCION FOOTER*/
+    .footer{
+        min-width: 100%;
+        background-color: #fff;
+        margin:0;
+        padding: 2.5rem;
+        color: #000;
+        text-align: left;
+    }
+    .footer-navbar{
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+        @include flex-wrap;
+        align-items: flex-start;
+        padding: 2rem;
+    }
+    .footer-list{
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 0 2rem;
+        @include flex-wrap;
+        justify-content: flex-start;
+        width: 60rem;
+        text-align: center;
+    }
+    .list-section{
+        min-width: 150px;
+        flex: 1 1 100px;
+        list-style: none;
+        padding: 0;
+        margin-right: 0rem;
+    }
+    .list-section ul{
+        list-style: none;
+        padding: 0;
+        margin: 0.5rem 0 0 0;
+    }
+    .list-item{
+        margin-bottom: 0.4rem;
+    }
+    .list-link{
+        text-decoration: none;
+        color: #000;
+        font-size: 1.8em;
+        transition: color 0.3s ease;
+    }
+    #footer-img{
+        width: 12rem;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-h{
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+    }
+    .footer-line{
+        width:100%;
+        background-color: #000;
+        padding: 1px;
+        margin-bottom: 10px;
+    }
+    .footer-redes{
+        width: 22rem;
+        margin: 0.5rem 0 0.5rem 1rem;
+    }
+    .footer-redes-li{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        max-width: none;
+        height: auto;
+        width: 19rem;
+        padding: 0 1rem 1rem 1rem;
+        margin-left: 3rem;
+    }
+    .footer-redes-h{
+        text-align: center;
+        font-size: 2.1rem;
+        margin:0.5rem 0 0.5rem 5rem;
+    }
+    .footer-redes-img{
+        width: 35px;
+        max-width: none;
+    }
+    /*NUEVOS.HTML*/
+    .seccion-catalogo{
+        margin: 0;
+        display: grid;
+        grid-template-columns: 25rem 1fr;
+        gap: 2rem;
+        padding: 0 1rem 1rem 0;
+    }
+    .main-h{
+        margin: 20vh auto 0 auto;
+        font-size: 3.8rem;
+        color: #fff;
+        width: 75rem;
+        padding: auto;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    .filtros-busqueda{
+        width: 25rem;
+        max-width: 100vh;
+        overflow-y: auto;
+        padding-right: 10px;
+        padding: 2.5rem;
+        background-color:#686D76;
+        border: 1px solid #fff;
+        position: sticky;
+        top: 0;
+        gap: 3rem;
+        height: 100vh;
+        margin-left:0;
+    }
+    .filtros-busqueda h3{
+        text-align: center;
+        font-size: 1.8rem;
+        color: #fff;
+        text-decoration:underline;
+    }
+    .filtro{
+        margin-bottom: 2rem;
+    }
+    .filtro h4{
+        margin-bottom: 0.5rem;
+        font-size: 1.8em;
+        padding-bottom: 0.3rem;
+        text-align: center;
+        text-decoration: underline;
+    }
+    #label-filtro{
+        font-size: 1.4em;
+    }
+    .seccion-cards{
+        @include flex-wrap;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .card-box{
+        width: 22rem;
+        max-width: none;
+        height: 26rem;
+    }
+    .carta-catalogo{
+        flex: 1 1 250px;
+        width: 20rem;
+        max-width: none;
+        height: 25rem;
+        margin-left: 0;
+        max-height: none;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .carta-catalogo a{
+        text-decoration: none;
+        color: #000;
+    }
+    .card-img{
+        border-radius: 10px 10px 0px 0px;
+        border-bottom: 2px solid #000;
+    }
+    .titulo-carta{
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+    .card-list{
+        height: 136px;
+        margin-left: 20px;
+        text-align: start;
+        max-height: none;
+        padding: 20px;
+    }
+    .card-list-item{
+        font-size: 1.4em;
+        letter-spacing: 2px;
+    }
+    .btn-acordeon{
+        font-size: 1em;
+    }
+    /*FICHAS TÉCNICAS*/
+    .ficha-titulo{
+        margin-top: 10rem;
+        text-align: center;
+        color: #fff;
+        font-size: 6rem;
+    }
+    .carrusel-imagenes{
+        margin-left: 18rem;
+        width: 80rem;
+        margin-top: 1rem;
+        max-width: none;
+        height: 35rem;
+    }
+    .carrusel-img-box{
+        width: 45rem;
+        height: 35rem;
+        margin-left: 15.1rem;
+    }
+    .carrusel-img{
+        justify-content: center;
+    }
+    .carrusel-btn{
+        background-color: #fff6;
+        border:1px solid #fff;
+        height: 35rem;
+        max-height: none;
+        width: 15rem;
+    }
+    .form-container{
+        border: 1px solid #ddd;
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: #686D76;
+        width: 35rem;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .form-container h2,p{
+        text-align: center;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+    .form-container p{
+        font-size: 1.5em;
+    }
+    .form-input, .form-textarea{
+        width: 30rem;
+        margin-left: 2rem;
+        border: 1px solid black;
+        letter-spacing: 1px;
+        font-size: 1.2em;
+        height: auto;
+        max-width: auto;
+    }
+    .form-label{
+        color: #fff;
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        text-decoration: underline;
+        margin-left: 2rem;
+    }
+    .form-btn{
+        text-align: center;
+        margin-left: 12rem;
+        width: 10rem;
+        max-width: auto;
+        height: 3rem;
+        max-height: auto;
+        font-size: 1.4em;
+        letter-spacing: 2px;
+    }
+    .ficha-container{
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #686D76;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+    .ficha-container h2{
+        text-align: center;
+        color: #fff;
+        padding: 1rem;
+        font-size: 3em;
+        text-decoration: underline;
+        letter-spacing: 2px;
+    }
+    .table{
+        border-radius: 10px;
+        font-size: 1.6em;
+        border: 1px solid #ddd;
+    }
+    .table tr{
+        width: 15rem;
+        background-color: transparent;
+    }
+    .table th{
+        letter-spacing: 3px;
+        color: #fff;
+        font-weight: 300;
+        border-bottom: 1px solid #ddd;
+        background-color: transparent;
+    }
+    .table td{
+        background-color: transparent;
+        letter-spacing: 3px;
+        color: #fff;
+    }
+    .img-mobile-box{
+        display: none;
+    }
+}
+@media (min-width:300px) and (max-width:999px){
+    /*PONIENDO CADA SECCION DEL INDEX EN GRID*/
+    body{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns:1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    .seccion-accesos-rapidos,.seccion-nuevos,.seccion-usados{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .footer-navbar{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    .footer-list,.footer-redes{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    /*SECCION HEADER Y NAVBAR*/
+    #navbar-img,#footer-img{
+        max-width: 4rem;
+    }
+    #navbar-menu{
+        text-align: center;
+    }
+    #navbar-link{
+        font-size: 2em;
+    }
+    #search-text{
+        font-size: 1.6em;
+    }
+    /*SECCION MAIN Y ACCESOS RÁPIDOS*/
+    #main-title{
+        margin-top: 5rem;
+        color: #fff;
+        font-size: 2.5em;
+        text-align: center;
+    }
+    #access-card{
+        max-width: none;
+    }
+    #access-img{
+        width: 9rem;
+        max-width: none;
+    }
+    .card-h{
+        font-size: 2em;
+    }
+    .card-p{
+        font-size: 1.5em;
+    }
+    /*SECCIÓN DE BÚSQUEDA*/
+    .seccion-busqueda{
+        @include flex-wrap;
+        text-align: center;
+        gap: 1.8rem;
+    }
+    #busqueda-titulo{
+        text-align: center;
+        font-size: 2.5em;
+    }
+    .box{
+        background-color: #e1d14395;
+        padding: 2rem;
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+    #txt-busqueda{
+        font-size: 1.4em;
+    }
+    #label-busq{
+        font-size: 2em;
+        margin-left: 1.2rem;
+    }
+    /*SECCIÓN USADOS Y NUEVOS*/
+    #titulo-seccion{
+        text-align: center;
+        font-size: 2.5em;
+    }
+    .nuevo-ingreso{
+        text-align: center;
+    }
+    .ingresos-box{
+        width: 100%;
+        max-width: none;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    .ingresos-box a {
+        text-decoration: none;
+        color: #000;
+    }
+    .ingreso-h{
+        font-size: 2em;
+    }
+    .ingresos-img{
+        width: 100%;
+        max-width: none;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+    .usado-ingreso{
+        text-align: center;
+    }
+    .usados-box{
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    .usados-box a{
+        text-decoration: none;
+        color: #000;
+    }
+    .btn-ingresos-wrapper{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    #btn-ingresos{
+        width: 12rem;
+        font-size: 1.5em;
+    }
+    /*SECCION FOOTER*/
+    .footer{
+        min-width: 100%;
+        background-color: #fff;
+        margin:0;
+        padding: 2rem;
+        color: #000;
+    }
+    .footer-navbar{
+        width: 100%;
+        max-width: none;
+    }
+    .footer-list{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+    .list-section{
+        list-style: none;
+        padding: 0;
+        margin-right: 0rem;
+    }
+    .list-section ul{
+        list-style: none;
+    }
+    .list-item{
+        margin-bottom: 0.4rem;
+    }
+    .list-link{
+        text-decoration: none;
+        color: #000;
+        font-size: 1.8em;
+        transition: color 0.3s ease;
+    }
+    .footer-h{
+    font-size: 2.1em;
+    margin-bottom: 0.5rem;
+    }
+    .footer-line{
+        width:auto;
+        max-width: none;
+        background-color: #000;
+        padding: 1px;
+        margin-bottom: 10px;
+    }
+    .footer-redes{
+        width: 100%;
+        max-width: none;
+    }
+    .footer-redes-li{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        list-style: none;
+        max-width: none;
+        height: auto;
+        width: auto;
+    }
+    .footer-redes-h{
+        text-align: center;
+        font-size: 2.1rem;
+    }
+    .footer-redes-img{
+        width: 2.5rem;
+        max-width: none;
+    }
+    /*NUEVOS.HTML*/
+    .main-h{
+        font-size: 2em;
+        margin-top: 4rem;
+        color: #fff;
+        text-align: center;
+    }
+    .seccion-cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .filtros-busqueda{
+            width: 100%;
+            max-width: none;
+            overflow-y: auto;
+            padding: 1rem;
+            background-color:#686D76;
+            border: 1px solid #fff;
+            height: auto;
+            margin-left:0;
+        }
+        .seccion-catalogo{
+            margin: 0;
+            display: grid;
+            gap: 2rem;
+            padding: 0 1rem 1rem 0;
+        }
+        .filtros-busqueda h3{
+            text-align: center;
+            font-size: 1.8rem;
+            color: #fff;
+            text-decoration:underline;
+        }
+        .filtro{
+            margin-bottom: 2rem;
+        }
+        .filtro h4{
+            margin-bottom: 0.5rem;
+            font-size: 1.8em;
+            padding-bottom: 0.3rem;
+            text-align: center;
+            text-decoration: underline;
+        }
+        #label-filtro{
+            font-size: 1.4em;
+        }
+        .card-box{
+            width: 100%;
+            max-width: none;
+            height: auto;
+        }
+        .carta-catalogo{
+            flex: 1 1 250px;
+            width: 100%;
+            max-width: none;
+            height: auto;
+            margin-left: 0;
+            max-height: none;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .carta-catalogo a{
+            text-decoration: none;
+            color: #000;
+        }
+        .card-img{
+            border-radius: 10px 10px 0px 0px;
+            border-bottom: 2px solid #000;
+        }
+        .titulo-carta{
+            font-size: 1.4em;
+            letter-spacing: 1.5px;
+        }
+        .card-list{
+            height: 136px;
+            margin-left: 20px;
+            text-align: start;
+            max-height: none;
+            padding: 20px;
+        }
+        .card-list-item{
+            font-size: 1.4em;
+            letter-spacing: 2px;
+        }
+        .btn-acordeon{
+            font-size: 1em;
+        }
+        /*FICHA-TECNICA*/
+        .ficha-titulo{
+            margin-top: 5rem;
+            text-align: center;
+            color: #fff;
+            font-size: 2.1em;
+        }
+        .carrusel-imagenes{
+            display: none;
+        }
+        .galeria-mobile{
+            background-color: #686D76;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .galeria-mobile img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .galeria-mobile h3{
+            text-align: center;
+            letter-spacing: 2px;
+            color: #fff;
+            padding: 5px;
+            text-decoration: underline;
+            font-size: 1.4em;
+        }
+        .form-container{
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: #686D76;
+            width: 15rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .form-container h2,p{
+            text-align: center;
+            color: #fff;
+            letter-spacing: 1.5px;
+        }
+        .form-container p{
+            font-size: 1.2em;
+        }
+        .form-input, .form-textarea{
+            width: auto;
+            margin-left: 1rem;
+            border: 1px solid black;
+            letter-spacing: 1px;
+            font-size: 1em;
+            height: auto;
+            max-width: auto;
+        }
+        .form-label{
+            color: #fff;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            text-decoration: underline;
+            margin-left: 1rem;
+        }
+        .form-btn{
+            text-align: center;
+            margin-left: 3rem;
+            width: 5rem;
+            max-width: auto;
+            height: 2rem;
+            max-height: auto;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+        }
+        .ficha-container{
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #686D76;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+        .ficha-container h2{
+            text-align: center;
+            color: #fff;
+            padding: 1rem;
+            font-size: 2em;
+            text-decoration: underline;
+            letter-spacing: 2px;
+        }
+        .table{
+            border-radius: 10px;
+            font-size: 1.2em;
+            border: 1px solid #ddd;
+        }
+        .table tr{
+            width: 10rem;
+            background-color: transparent;
+        }
+        .table th{
+            letter-spacing: 3px;
+            color: #fff;
+            font-weight:normal;
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+        }
+        .table td{
+            background-color: transparent;
+            letter-spacing: 3px;
+            color: #fff;
+        }
+    }
