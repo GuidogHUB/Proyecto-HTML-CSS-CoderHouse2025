@@ -1,4 +1,16 @@
 @charset "UTF-8";
+#search-text {
+  border: 1px solid black;
+}
+
+.label-busqueda, #busqueda-titulo, #titulo-seccion, #main-title, #label-busq {
+  color: #ffffff;
+}
+
+.ingresos-box a, .usados-box a {
+  color: #000;
+}
+
 input[type=checkbox] {
   width: 30px;
   height: 30px;
@@ -44,9 +56,8 @@ input[type=checkbox] {
 }
 
 body {
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
   font-style: normal;
   background-color: #344040;
 }
@@ -57,7 +68,6 @@ body {
 }
 
 .label-busqueda {
-  color: #ffffff;
   font-size: 25px;
 }
 
@@ -69,37 +79,17 @@ body {
   color: blue;
 }
 
-#busqueda-titulo {
-  color: #ffffff;
-}
-
-#titulo-seccion {
-  color: #ffffff;
-}
-
-#search-text {
-  border: 1px solid black;
-}
-
-#main-title {
-  color: #ffffff;
+.ingresos-box a, .usados-box a {
+  text-decoration: none;
 }
 
 .box {
   background-color: rgba(225, 209, 67, 0.5843137255);
 }
 
-#label-busq {
-  color: #fff;
-}
-
 /*SECCION 0KM INGRESOS*/
 .ingresos-box {
   background-color: #fff;
-}
-
-.ingresos-box a {
-  color: #000;
 }
 
 .ingresos-img {
@@ -115,11 +105,6 @@ body {
   background-color: #fff;
 }
 
-.usados-box a {
-  text-decoration: none;
-  color: #000;
-}
-
 /*MEDIA QUERIES*/
 @media (min-width: 1000px) and (max-width: 1399px) {
   /*BODY,NAVBAR Y CONTENIDO MAIN*/
@@ -133,11 +118,11 @@ body {
     flex: 1;
   }
   #main-title {
-    font-size: 2.5rem;
     padding: 1rem 1rem 1rem 1rem;
     margin: 15vh 0vw 3vh 5vw;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.8em;
     text-align: center;
+    text-decoration: underline;
   }
   #txt-busqueda {
     max-width: 25rem;
@@ -534,15 +519,15 @@ body {
     margin: 0;
     padding: 0;
   }
-  #navbar-img {
-    max-width: 7rem;
-  }
   #navbar-menu {
     font-size: 2rem;
     height: 5rem;
     padding: 3.5rem 0 3.5rem 0;
   }
-  #ul-navbar {
+  #navbar-menu #navbar-img {
+    max-width: 7rem;
+  }
+  #navbar-menu #ul-navbar {
     margin: 0vh 0vw 0vh 10vw;
     padding: 1vh 1vw 1vh 1vw;
     width: 50rem;
@@ -558,12 +543,16 @@ body {
   }
   #main-title {
     color: #fff;
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     width: 85rem;
     padding: 1rem;
     margin: 18vh 0vw 0vh 15vw;
     letter-spacing: 0.2em;
     text-align: center;
+  }
+  .animate__fadeInUp {
+    animation-delay: 0.5s;
+    animation-duration: 5s;
   }
   .seccion-accesos-rapidos {
     display: flex;
@@ -576,32 +565,35 @@ body {
     padding: 3rem;
     justify-content: space-around;
   }
-  #access-card {
+  .seccion-accesos-rapidos #access-card {
     width: 25rem;
     height: 26rem;
     border-radius: 20px;
     text-align: end;
   }
-  #access-img {
+  .seccion-accesos-rapidos #access-img {
     max-width: 13rem;
     height: auto;
   }
-  .card-h {
+  .seccion-accesos-rapidos .card-h {
     font-size: 2.8rem;
     letter-spacing: 0.3rem;
   }
-  .card-p {
+  .seccion-accesos-rapidos .card-p {
     font-size: 1.7rem;
     margin: 2rem 0 0 0;
     letter-spacing: 0.2rem;
   }
-  #txt-busqueda {
-    max-width: none;
-    width: 27rem;
-    height: auto;
-    border-radius: 12px;
-    font-size: 1.6em;
-    border: 1px solid black;
+  #busqueda-titulo {
+    text-align: center;
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 3.8em;
+    letter-spacing: 0.2em;
+    margin: 3vh 0vw 5vh 0vw;
+  }
+  .animate__lightSpeedInLeft {
+    animation-duration: 3s;
+    animation-delay: 2.5s;
   }
   .box {
     background-color: rgba(225, 209, 67, 0.5843137255);
@@ -619,12 +611,18 @@ body {
     padding: 1.5rem;
     justify-content: space-around;
   }
-  #busqueda-titulo {
-    text-align: center;
-    padding: 1rem 1rem 1rem 1rem;
-    font-size: 3.8em;
-    letter-spacing: 0.2em;
-    margin: 3vh 0vw 5vh 0vw;
+  .seccion-busqueda #txt-busqueda {
+    max-width: none;
+    width: 27rem;
+    height: auto;
+    border-radius: 12px;
+    font-size: 1.6em;
+    border: 1px solid black;
+  }
+  .seccion-busqueda #label-busq {
+    margin: 1vh 1vw 1vh 0.5vw;
+    letter-spacing: 0.3rem;
+    color: #fff;
   }
   #titulo-seccion {
     text-align: center;
@@ -633,10 +631,9 @@ body {
     letter-spacing: 0.2em;
     margin: 3vh 0vw 5vh 0vw;
   }
-  #label-busq {
-    margin: 1vh 1vw 1vh 0.5vw;
-    letter-spacing: 0.3rem;
-    color: #fff;
+  .animate__fadeInRight {
+    animation-duration: 1.5s;
+    animation-delay: 3.5s;
   }
   /*SECCION 0KM INGRESOS*/
   .seccion-nuevos {
@@ -645,23 +642,23 @@ body {
     gap: 2rem;
     margin: 1vh 0vw 1vh 5vw;
   }
-  .nuevo-ingreso {
+  .seccion-nuevos .nuevo-ingreso {
     text-align: center;
   }
-  .ingresos-box {
+  .seccion-nuevos .ingresos-box {
     background-color: #fff;
     border-radius: 20px;
   }
-  .ingresos-box a {
+  .seccion-nuevos .ingresos-box a {
     text-decoration: none;
     color: #000;
   }
-  .ingreso-h {
-    font-size: 2em;
-  }
-  .ingresos-img {
+  .seccion-nuevos .ingresos-img {
     border-radius: 20px;
     background-color: transparent;
+  }
+  .seccion-nuevos .ingreso-h {
+    font-size: 2em;
   }
   /*SECCION-USADOS-INGRESOS*/
   .seccion-usados {
@@ -670,14 +667,14 @@ body {
     gap: 2rem;
     margin: 1vh 0vw 1vh 5vw;
   }
-  .usado-ingreso {
+  .seccion-usados .usado-ingreso {
     text-align: center;
   }
-  .usados-box {
+  .seccion-usados .usados-box {
     background-color: #fff;
     border-radius: 20px;
   }
-  .usados-box a {
+  .seccion-usados .usados-box a {
     text-decoration: none;
     color: #000;
   }
@@ -699,7 +696,7 @@ body {
     color: #000;
     text-align: left;
   }
-  .footer-navbar {
+  .footer .footer-navbar {
     width: 100%;
     max-width: none;
     margin: 0 auto;
@@ -708,7 +705,19 @@ body {
     align-items: flex-start;
     padding: 2rem;
   }
-  .footer-list {
+  .footer .footer-line {
+    width: 100%;
+    background-color: #000;
+    padding: 1px;
+    margin-bottom: 10px;
+  }
+  .footer #footer-img {
+    width: 12rem;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer .footer-list {
     list-style: none;
     padding: 0;
     margin: 1rem 0 0 2rem;
@@ -718,48 +727,41 @@ body {
     width: 60rem;
     text-align: center;
   }
-  .list-section {
+  .footer .list-section {
     min-width: 150px;
     flex: 1 1 100px;
     list-style: none;
     padding: 0;
     margin-right: 0rem;
   }
-  .list-section ul {
+  .footer .footer-h {
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .footer .list-section ul {
     list-style: none;
     padding: 0;
     margin: 0.5rem 0 0 0;
   }
-  .list-item {
+  .footer .list-item {
     margin-bottom: 0.4rem;
   }
-  .list-link {
+  .footer .list-link {
     text-decoration: none;
     color: #000;
     font-size: 1.8em;
     transition: color 0.3s ease;
   }
-  #footer-img {
-    width: 12rem;
-    max-width: none;
-    padding: 0;
-    margin: 0;
-  }
-  .footer-h {
-    font-size: 2.1rem;
-    margin-bottom: 0.5rem;
-  }
-  .footer-line {
-    width: 100%;
-    background-color: #000;
-    padding: 1px;
-    margin-bottom: 10px;
-  }
-  .footer-redes {
+  .footer .footer-redes {
     width: 22rem;
     margin: 0.5rem 0 0.5rem 1rem;
   }
-  .footer-redes-li {
+  .footer .footer-redes-h {
+    text-align: center;
+    font-size: 2.1rem;
+    margin: 0.5rem 0 0.5rem 5rem;
+  }
+  .footer .footer-redes-li {
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -769,12 +771,7 @@ body {
     padding: 0 1rem 1rem 1rem;
     margin-left: 3rem;
   }
-  .footer-redes-h {
-    text-align: center;
-    font-size: 2.1rem;
-    margin: 0.5rem 0 0.5rem 5rem;
-  }
-  .footer-redes-img {
+  .footer .footer-redes-img {
     width: 35px;
     max-width: none;
   }
@@ -1419,4 +1416,33 @@ body {
   border-bottom: 2px solid #000;
 }
 
-/*# sourceMappingURL=style.css.map */
+.ficha-titulo {
+  text-align: center;
+  color: #fff;
+}
+
+.form-container {
+  border: 1px solid #ddd;
+  background-color: #686D76;
+}
+
+.form-container h2, p {
+  text-align: center;
+  color: #fff;
+}
+
+.form-input, .form-textarea {
+  border: 1px solid black;
+}
+
+.form-label {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.ficha-container {
+  border: 1px solid #ddd;
+  background-color: #686D76;
+}
+
+/*# sourceMappingURL=estilos.css.map */

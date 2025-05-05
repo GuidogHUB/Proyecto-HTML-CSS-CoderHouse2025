@@ -1,16 +1,16 @@
 @use '../base/variables.scss' as *;
+@use '../base/extends.scss' as *;
 
 body{
     @include main-font;
     @include bg-color;
 }
-
 /*INDEX.HTML*/
 .header-menu{
     background-color: #fff4;
 }
 .label-busqueda{
-    color: #ffffff;
+    @extend %texto-blanco;
     font-size: 25px;
 }
 .list-link:hover{
@@ -19,31 +19,24 @@ body{
 #navbar-link:hover{
     color: blue;
 }
-#busqueda-titulo{
-    color: #ffffff;
-}
-#titulo-seccion{
-    color: #ffffff;
+#busqueda-titulo,#titulo-seccion,#main-title,#label-busq {
+    @extend %texto-blanco;
 }
 #search-text{
-    border: 1px solid black;
+    @extend %borde-negro;
 }
-#main-title{
-    color:#ffffff;
+.ingresos-box a, .usados-box a{
+    @extend %texto-negro;
+    text-decoration: none;
 }
 .box{
     background-color: #e1d14395;
-}
-#label-busq{
-    color: #fff;
 }
 /*SECCION 0KM INGRESOS*/
 .ingresos-box{
     background-color: #fff;
 }
-.ingresos-box a {
-    color: #000;
-}
+
 .ingresos-img{
     background-color: transparent;
 }
@@ -54,7 +47,4 @@ body{
 .usados-box{
     background-color: #fff;
 }
-.usados-box a{
-    text-decoration: none;
-    color: #000;
-}
+

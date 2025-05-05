@@ -1,19 +1,15 @@
-
 @mixin flex-wrap{
     display: flex;
     flex-wrap: wrap;
 }
 @mixin main-font{
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-}
-@mixin mf-bold{
-    font-family: "Orbitron", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 @mixin bg-color{
     background-color:#344040;
+}
+@mixin font-size($size){
+    font-size: $size;
 }

@@ -12,11 +12,11 @@
         flex: 1;
     }
     #main-title{
-        font-size: 2.5rem;
         padding: 1rem 1rem 1rem 1rem;
         margin: 15vh 0vw 3vh 5vw;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.8em;
         text-align: center;
+        text-decoration: underline;
     }
     #txt-busqueda{
         max-width: 25rem;
@@ -406,21 +406,21 @@
         margin: 0;
         padding: 0;
     }
-    #navbar-img{
-        max-width: 7rem;
-    }
     #navbar-menu{
         font-size: 2rem;
         height: 5rem;
         padding:3.5rem 0 3.5rem 0;
-    }
-    #ul-navbar{
-        margin:0vh 0vw 0vh 10vw;
-        padding: 1vh 1vw 1vh 1vw;
-        width: 50rem;
-        max-width: none;
-        gap: 1.5rem;
-        justify-content: space-around;
+            #navbar-img{
+            max-width: 7rem;
+            }
+            #ul-navbar{
+            margin:0vh 0vw 0vh 10vw;
+            padding: 1vh 1vw 1vh 1vw;
+            width: 50rem;
+            max-width: none;
+            gap: 1.5rem;
+            justify-content: space-around;
+            }
     }
     #search-text{
         width: 30rem;
@@ -430,12 +430,16 @@
     }
     #main-title{
         color:#fff;
-        font-size: 3.8rem;
+        @include font-size(3.5rem);
         width: 85rem;
         padding: 1rem;
         margin: 18vh 0vw 0vh 15vw;
         letter-spacing: 0.2em;
         text-align: center;
+    }
+    .animate__fadeInUp{
+        animation-delay: 0.5s;
+        animation-duration: 5s;
     }
     .seccion-accesos-rapidos{
         @include flex-wrap;
@@ -446,33 +450,36 @@
         margin:5vh 0vw 5vh 13vw;
         padding: 3rem;
         justify-content: space-around;
+        #access-card{
+            width: 25rem;
+            height: 26rem;
+            border-radius: 20px;
+            text-align: end;
+        }
+        #access-img{
+            max-width: 13rem;
+            height: auto;
+        }
+        .card-h{
+            font-size: 2.8rem;
+            letter-spacing: 0.3rem;
+        }
+        .card-p{
+            font-size: 1.7rem;
+            margin: 2rem 0 0 0;
+            letter-spacing: 0.2rem;
+        }
     }
-    #access-card{
-        width: 25rem;
-        height: 26rem;
-        border-radius: 20px;
-        text-align: end;
+    #busqueda-titulo{
+        text-align: center;
+        padding: 1rem 1rem 1rem 1rem;
+        font-size: 3.8em;
+        letter-spacing: 0.2em;
+        margin: 3vh 0vw 5vh 0vw;
     }
-    #access-img{
-        max-width: 13rem;
-        height: auto;
-    }
-    .card-h{
-        font-size: 2.8rem;
-        letter-spacing: 0.3rem;
-    }
-    .card-p{
-        font-size: 1.7rem;
-        margin: 2rem 0 0 0;
-        letter-spacing: 0.2rem;
-    }
-    #txt-busqueda{
-        max-width: none;
-        width: 27rem;
-        height: auto;
-        border-radius: 12px;
-        font-size: 1.6em;
-        border: 1px solid black;
+    .animate__lightSpeedInLeft{
+        animation-duration: 3s;
+        animation-delay: 2.5s;
     }
     .box{
         background-color: #e1d14395;
@@ -488,13 +495,19 @@
         margin: 5vh 0vw 5vh 25vw;
         padding: 1.5rem;
         justify-content: space-around;
-    }
-    #busqueda-titulo{
-        text-align: center;
-        padding: 1rem 1rem 1rem 1rem;
-        font-size: 3.8em;
-        letter-spacing: 0.2em;
-        margin: 3vh 0vw 5vh 0vw;
+        #txt-busqueda{
+            max-width: none;
+            width: 27rem;
+            height: auto;
+            border-radius: 12px;
+            font-size: 1.6em;
+            border: 1px solid black;
+        }
+        #label-busq{
+            margin: 1vh 1vw 1vh 0.5vw;
+            letter-spacing: 0.3rem;
+            color: #fff;
+        }
     }
     #titulo-seccion{
         text-align: center;
@@ -503,51 +516,50 @@
         letter-spacing: 0.2em;
         margin: 3vh 0vw 5vh 0vw;
     }
-    #label-busq{
-        margin: 1vh 1vw 1vh 0.5vw;
-        letter-spacing: 0.3rem;
-        color: #fff;
+    .animate__fadeInRight{
+        animation-duration: 1.5s;
+        animation-delay: 3.5s
     }
     /*SECCION 0KM INGRESOS*/
     .seccion-nuevos{
         @include flex-wrap;
         gap: 2rem;
         margin:1vh 0vw 1vh 5vw;
-    }
-    .nuevo-ingreso{
-        text-align: center;
-    }
-    .ingresos-box{
-        background-color: #fff;
-        border-radius: 20px;
-    }
-    .ingresos-box a {
-        text-decoration: none;
-        color: #000;
-    }
-    .ingreso-h{
-        font-size: 2em;
-    }
-    .ingresos-img{
-        border-radius: 20px;
-        background-color: transparent;
+        .nuevo-ingreso{
+            text-align: center;
+        }
+        .ingresos-box{
+            background-color: #fff;
+            border-radius: 20px;
+        }
+        .ingresos-box a {
+            text-decoration: none;
+            color: #000;
+        }
+        .ingresos-img{
+            border-radius: 20px;
+            background-color: transparent;
+        }
+        .ingreso-h{
+            font-size: 2em;
+        }
     }
     /*SECCION-USADOS-INGRESOS*/
     .seccion-usados{
         @include flex-wrap;
         gap: 2rem;
         margin:1vh 0vw 1vh 5vw;
-    }
-    .usado-ingreso{
-        text-align: center;
-    }
-    .usados-box{
-        background-color: #fff;
-        border-radius: 20px;
-    }
-    .usados-box a{
-        text-decoration: none;
-        color: #000;
+        .usado-ingreso{
+            text-align: center;
+        }
+        .usados-box{
+            background-color: #fff;
+            border-radius: 20px;
+        }
+        .usados-box a{
+            text-decoration: none;
+            color: #000;
+        }
     }
     .btn-ingresos-wrapper{
         width: 100%;
@@ -566,83 +578,83 @@
         padding: 2.5rem;
         color: #000;
         text-align: left;
-    }
-    .footer-navbar{
-        width: 100%;
-        max-width: none;
-        margin: 0 auto;
-        @include flex-wrap;
-        align-items: flex-start;
-        padding: 2rem;
-    }
-    .footer-list{
-        list-style: none;
-        padding: 0;
-        margin: 1rem 0 0 2rem;
-        @include flex-wrap;
-        justify-content: flex-start;
-        width: 60rem;
-        text-align: center;
-    }
-    .list-section{
-        min-width: 150px;
-        flex: 1 1 100px;
-        list-style: none;
-        padding: 0;
-        margin-right: 0rem;
-    }
-    .list-section ul{
-        list-style: none;
-        padding: 0;
-        margin: 0.5rem 0 0 0;
-    }
-    .list-item{
-        margin-bottom: 0.4rem;
-    }
-    .list-link{
-        text-decoration: none;
-        color: #000;
-        font-size: 1.8em;
-        transition: color 0.3s ease;
-    }
-    #footer-img{
-        width: 12rem;
-        max-width: none;
-        padding: 0;
-        margin: 0;
-    }
-    .footer-h{
-    font-size: 2.1rem;
-    margin-bottom: 0.5rem;
-    }
-    .footer-line{
-        width:100%;
-        background-color: #000;
-        padding: 1px;
-        margin-bottom: 10px;
-    }
-    .footer-redes{
-        width: 22rem;
-        margin: 0.5rem 0 0.5rem 1rem;
-    }
-    .footer-redes-li{
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-        max-width: none;
-        height: auto;
-        width: 19rem;
-        padding: 0 1rem 1rem 1rem;
-        margin-left: 3rem;
-    }
-    .footer-redes-h{
-        text-align: center;
-        font-size: 2.1rem;
-        margin:0.5rem 0 0.5rem 5rem;
-    }
-    .footer-redes-img{
-        width: 35px;
-        max-width: none;
+        .footer-navbar{
+            width: 100%;
+            max-width: none;
+            margin: 0 auto;
+            @include flex-wrap;
+            align-items: flex-start;
+            padding: 2rem;
+        }
+        .footer-line{
+            width:100%;
+            background-color: #000;
+            padding: 1px;
+            margin-bottom: 10px;
+        }
+        #footer-img{
+            width: 12rem;
+            max-width: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-list{
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 2rem;
+            @include flex-wrap;
+            justify-content: flex-start;
+            width: 60rem;
+            text-align: center;
+        }
+        .list-section{
+            min-width: 150px;
+            flex: 1 1 100px;
+            list-style: none;
+            padding: 0;
+            margin-right: 0rem;
+        }
+        .footer-h{
+            font-size: 2.1rem;
+            margin-bottom: 0.5rem;
+            }
+        .list-section ul{
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0 0;
+        }
+        .list-item{
+            margin-bottom: 0.4rem;
+        }
+        .list-link{
+            text-decoration: none;
+            color: #000;
+            font-size: 1.8em;
+            transition: color 0.3s ease;
+        }
+        .footer-redes{
+            width: 22rem;
+            margin: 0.5rem 0 0.5rem 1rem;
+        }
+        .footer-redes-h{
+            text-align: center;
+            font-size: 2.1rem;
+            margin:0.5rem 0 0.5rem 5rem;
+        }
+        .footer-redes-li{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            max-width: none;
+            height: auto;
+            width: 19rem;
+            padding: 0 1rem 1rem 1rem;
+            margin-left: 3rem;
+        }
+        .footer-redes-img{
+            width: 35px;
+            max-width: none;
+        }
     }
     /*NUEVOS.HTML*/
     .seccion-catalogo{

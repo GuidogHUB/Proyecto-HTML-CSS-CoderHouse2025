@@ -1,5 +1,7 @@
 @use '../base/variables' as *;
 
+@use '../base/extends.scss' as *;
+
 @use '../components/ButtonsInputs';
 
 @use '../components/cards';
@@ -15,5 +17,8 @@
 @use '../layout/mediaqueries';
 
 @use 'catalogo';
+
+@use 'ficha_tecnica';
+
 
 
