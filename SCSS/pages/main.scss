@@ -6,18 +6,51 @@ body{
     @include bg-color;
 }
 /*INDEX.HTML*/
-.header-menu{
-    background-color: #fff4;
+#navbar-menu{
+    background-color: #fff8;
+}
+#navbar-menu:hover{
+    background-color: #fff;
+    transition: 0.5s;
 }
 .label-busqueda{
     @extend %texto-blanco;
     font-size: 25px;
 }
+#banner{
+    border-bottom: 1px solid #fff;
+}
+#access-card{
+    border: 5px solid goldenrod;
+}
+.card-h,.card-p{
+    color: black;
+}
+#access-card:hover{
+    background-color: #fff6;
+    transition: 0.5s;
+    color: #fff !important;
+    text-shadow: 2px 2px 4px white;
+}
+.banner-index{
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid goldenrod;
+}
+.banner-h,.banner-p{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
 .list-link:hover{
-    color: blue;
+    color: goldenrod;
+    transition: color 0.3s ease;
+}
+.list-link{
+    text-decoration: none;
 }
 #navbar-link:hover{
-    color: blue;
+    color: goldenrod;
 }
 #busqueda-titulo,#titulo-seccion,#main-title,#label-busq {
     @extend %texto-blanco;
@@ -26,17 +59,39 @@ body{
     @extend %borde-negro;
 }
 .ingresos-box a, .usados-box a{
-    @extend %texto-negro;
     text-decoration: none;
 }
 .box{
-    background-color: #e1d14395;
+    background-color: goldenrod;
+}
+.seccion-box{
+    background: rgba(256, 256, 256, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    border: 2px solid goldenrod;
+    color: #fff;
+    .ingresos-h3{
+        text-decoration: underline;
+        text-align: center; 
+        font-weight: bold;
+        font-style: italic;
+    }
+    .ingresos-p{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: start;
+        font-style: oblique;
+    }
+    .ingresos-h4{
+        text-decoration: underline;
+        text-align: start;
+        font-weight: bolder;
+        font-style: oblique;
+    }
 }
 /*SECCION 0KM INGRESOS*/
 .ingresos-box{
     background-color: #fff;
 }
-
 .ingresos-img{
     background-color: transparent;
 }
@@ -47,4 +102,27 @@ body{
 .usados-box{
     background-color: #fff;
 }
-
+#btn-ingresos a{
+    color: #fff;
+}
+#btn-ingresos:hover{
+    color: #000 !important; 
+}
+/*NOSOTROS.HTML*/
+.historia-section{
+    background: rgba(100, 100, 100, 0.5);
+}
+.historia-card,.historia-final{
+padding: 3rem;
+text-align: center; 
+}
+.historia-card,.img-container{
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 25px;
+        border: 3px solid goldenrod;
+}
+.historia-final{
+    border: 2px solid goldenrod;
+    border-radius: 20px;
+    background: rgba(256, 256, 256, 0.5);
+}

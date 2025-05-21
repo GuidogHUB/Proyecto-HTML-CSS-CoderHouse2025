@@ -1,6 +1,7 @@
 @use '../base/variables' as *;
 /*MEDIA QUERIES*/
-@media(min-width:1000px) and (max-width:1399px){
+/*DESKTOP 1*/
+@media(min-width:1001px) and (max-width:1400px){ 
     /*BODY,NAVBAR Y CONTENIDO MAIN*/
     body{
         display: flex;
@@ -12,31 +13,34 @@
         flex: 1;
     }
     #main-title{
-        padding: 1rem 1rem 1rem 1rem;
-        margin: 15vh 0vw 3vh 5vw;
-        letter-spacing: 0.8em;
+        @include font-size(2.5rem);
+        width: 65rem;
+        padding: 1rem;
+        margin: 18vh 0vw 0vh 5vw;
+        letter-spacing: 0.2em;
         text-align: center;
-        text-decoration: underline;
     }
-    #txt-busqueda{
-        max-width: 25rem;
-        min-height: 2.5em;
-        border-radius: 12px;
-        font-size: 1.2em;
-        border: 1px solid black;
-    }
-    .box{
+    /*CAROUSEL*/
+        .contenedor-banner{
+        height: 65vh;
         width: 100%;
-        max-width: none;
-        height: auto;
-    }
-    .seccion-busqueda{
-        @include flex-wrap;
-        max-width: 50rem;
-        height: auto;
-        margin: 5vh 0vw 5vh 25vw;
-        padding: 4vh 2vw 4vh 2vw;
-        justify-content: space-between;
+        max-height: none;
+        margin-top: 5rem;
+        .carrousel-img{
+            height: 65vh;
+            object-fit: cover;
+        }
+        .banner-index{
+            width: 45rem;
+            max-width: none;
+            height: 10rem;
+        }
+        .banner-h{
+            font-size: 1.5rem !important;
+        }
+        .banner-p{
+            font-size: 1.2rem !important;
+        }
     }
     #busqueda-titulo{
         text-align: center;
@@ -49,44 +53,53 @@
         max-width: 5rem;
     }
     #navbar-menu{
-        font-size: 1.4rem;
+        width: 100%;
+        max-width: none;
         height: 5rem;
     }
     #ul-navbar{
-        margin:0vh 0vw 0vh 10vw;
-        padding: 1vh 1vw 1vh 1vw;
-        max-width: 43rem;
+        width: 25rem;
+        max-width: none;
         gap: 0.5rem;
-        justify-content: space-between;
+    }
+    .navbar-link{
+        font-size: 1.3rem;
     }
     #search-text{
-        width: 23rem;
+        width: 17rem;
+        max-width: none;
         height: auto;
+    }
+    .form-busqueda{
+        margin-right: 10rem;
     }
     .seccion-accesos-rapidos{
         @include flex-wrap;
-        min-width: 15rem;
-        max-width: 65rem;
+        width: 100%;
+        max-width: none;
         height: auto;
-        margin:5vh 0vw 5vh 12vw;
-        justify-content: space-between;
-    }
-    #access-card{
-        width: 20rem;
+        margin:5vh 0vw 5vh 0;
+        justify-content: space-around;
+            #access-card{
+        width: 28rem;
+        justify-content: center;
+        max-width: none;
         height: auto;
         border-radius: 20px;
     }
     #access-img{
-        max-width: 11.5rem;
+        width: 10rem;
+        margin-top: 3rem;
+        max-width: none;
         height: auto;
     }
     .card-h{
-        font-size: 2.5rem;
-        letter-spacing: 0.3rem;
+        font-size: 1.7rem;
     }
     .card-p{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         letter-spacing: 0.2rem;
+    }
     }
     #titulo-seccion{
         text-align: center;
@@ -95,52 +108,84 @@
         letter-spacing: 0.2em;
         margin: 5vh 0vw 5vh 5vw;
     }
-    #label-busq{
-        margin: 1vh 1vw 1vh 0.5vw;
-        letter-spacing: 0.3rem;
+    .seccion-busqueda{
+        @include flex-wrap;
+        gap: 1rem;
+        border: 1px solid red;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin: 5vh 0vw 5vh 0;
+        padding: 2rem;
+        #txt-busqueda{
+            max-width: none;
+            width: 100%;
+            max-width: none;
+            height: auto;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            border: 1px solid black;
+        }
+        #label-busq{
+            letter-spacing: 0.3rem;
+            font-size: 1.5rem;
+        }
+        .box{
+            padding: 2rem;
+        }
+    }
+        .seccion-box{
+        width: 50rem;
+        padding: 1.5rem;
+        margin: 0 0 2rem 5rem;
+        .ingresos-h3{
+            font-size: 1.8rem;
+        }
+        .ingresos-p{
+        font-size: 1.5rem;
+        }
     }
     /*SECCION 0KM INGRESOS*/
-    .seccion-nuevos{
+        .seccion-deportivos,.seccion-SUV,.seccion-sedanes{
+        width: 100%;
+        max-width: none;
         @include flex-wrap;
-        gap: 1.5rem;
-        margin:3vh 0vw 2vh 1vw;
-    }
-    .nuevo-ingreso{
-        text-align: center;
-        font-size: 18px;
-    }
-    .ingresos-box{
-        border-radius: 20px;
-    }
-    .ingresos-box a {
-        text-decoration: none;
-        letter-spacing: 3px;
-    }
-    .ingresos-img{
-        border-radius: 20px;
-    }
-    #btn-nuevos{
-        margin: 0vh 0vw 2vh 45vw;
-        padding: 0.9rem;
-    }
-    /*SECCION-USADOS-INGRESOS*/
-    .seccion-usados{
-        @include flex-wrap;
-        gap: 1.5rem;
-        margin:3vh 0vw 5vh 1vw;
-    }
-    .usados-box{
-        border-radius: 20px;
+        justify-content: space-around;
+        margin:1vh 0vw 1vh 0;
+        .card-body{
+            text-align: center;
+        }
+        .ingresos-box{
+            background-color: #fff;
+            border-radius: 20px;
+            width: 24rem;
+        }
+        .ingresos-img{
+            margin-top: 0;
+            padding: 0;
+            object-fit: cover;
+            height: 12rem;
+            max-height: none;
+            border-radius: 20px;
+            background-color: transparent;
+        }
+        .ingreso-h{
+            font-size: 1.7rem;
+        }
     }
     .btn-ingresos-wrapper{
         width: 100%;
-        height: 3rem;
+        height: 5rem;
         text-align: center;
-    }
-    #btn-ingresos{
-        width: 13rem;
-        font-size: 1.5em;
-    }
+        margin: 1rem 0 1rem 0;
+        }
+        #btn-ingresos{
+        width: 25rem;
+        padding: 1rem;
+        font-size: 1.8em;
+        letter-spacing: 3px;
+        margin: 1rem 0 1rem 0;
+        }
     /*SECCION FOOTER*/
     .footer{
         min-width: 100%;
@@ -152,6 +197,7 @@
         max-width: none;
         margin: 0 auto;
         @include flex-wrap;
+        justify-content: space-around;
         padding: 1rem;
     }
     .footer-list{
@@ -159,6 +205,7 @@
         padding: 0;
         margin: 0 0 0 2rem;
         @include flex-wrap;
+        justify-content: space-around;
         width: 45rem;
     }
     .list-section{
@@ -185,7 +232,7 @@
         margin: 0;
     }
     .footer-h{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
     }
     .footer-line{
@@ -213,6 +260,15 @@
         width: 35px;
         max-width: none;
     }
+    .footer-list,
+.footer-list ul,
+.list-section,
+.list-section ul,
+.list-item,.footer-redes,.footer-redes-li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
             /*CATÁLOGOS*/
             .seccion-catalogo{
                 margin: 0;
@@ -398,7 +454,8 @@
                 display: none;
             }
 }
-@media(min-width:1400px){
+/*DESKTOP 2*/
+@media(min-width:1401px){
     /*BODY,NAVBAR Y CONTENIDO MAIN*/
     body{
         display: flex;
@@ -407,20 +464,29 @@
         padding: 0;
     }
     #navbar-menu{
-        font-size: 2rem;
+        font-size: 1.5rem;
         height: 5rem;
         padding:3.5rem 0 3.5rem 0;
+        font-weight: 500;
             #navbar-img{
             max-width: 7rem;
             }
             #ul-navbar{
-            margin:0vh 0vw 0vh 10vw;
+            margin:0vh 0vw 0vh 5vw;
             padding: 1vh 1vw 1vh 1vw;
-            width: 50rem;
+            width: 55rem;
             max-width: none;
-            gap: 1.5rem;
             justify-content: space-around;
+            gap: 1rem;
             }
+    }
+    /*CARROUSEL*/
+    #contenedor-banner{
+        height: 85vh;
+        #banner-img{
+            height: 85vh;
+            object-fit: cover;
+        }
     }
     #search-text{
         width: 30rem;
@@ -429,7 +495,6 @@
         max-width: none;
     }
     #main-title{
-        color:#fff;
         @include font-size(3.5rem);
         width: 85rem;
         padding: 1rem;
@@ -442,6 +507,7 @@
         animation-duration: 5s;
     }
     .seccion-accesos-rapidos{
+        color: #000;
         @include flex-wrap;
         width: 90rem;
         max-width: none;
@@ -451,21 +517,23 @@
         padding: 3rem;
         justify-content: space-around;
         #access-card{
-            width: 25rem;
-            height: 26rem;
+            width: 35rem;
+            height: 18rem;
             border-radius: 20px;
-            text-align: end;
+            text-align: center;
         }
         #access-img{
+            margin-top: 3rem;
             max-width: 13rem;
             height: auto;
+            object-fit: cover;
         }
         .card-h{
-            font-size: 2.8rem;
-            letter-spacing: 0.3rem;
+            font-size: 1.8rem;
+            letter-spacing: 0.2rem;
         }
         .card-p{
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             margin: 2rem 0 0 0;
             letter-spacing: 0.2rem;
         }
@@ -482,31 +550,31 @@
         animation-delay: 2.5s;
     }
     .box{
-        background-color: #e1d14395;
         width: 100%;
         max-width: none;
         height: auto;
     }
     .seccion-busqueda{
         @include flex-wrap;
-        width: 50rem;
+        width: 57rem;
         max-width: none;
         height: auto;
         margin: 5vh 0vw 5vh 25vw;
         padding: 1.5rem;
-        justify-content: space-around;
         #txt-busqueda{
             max-width: none;
-            width: 27rem;
+            width: 100%;
+            max-width: none;
             height: auto;
             border-radius: 12px;
-            font-size: 1.6em;
+            font-size: 1.3em;
             border: 1px solid black;
         }
         #label-busq{
             margin: 1vh 1vw 1vh 0.5vw;
             letter-spacing: 0.3rem;
             color: #fff;
+            font-size: 2rem;
         }
     }
     #titulo-seccion{
@@ -520,56 +588,58 @@
         animation-duration: 1.5s;
         animation-delay: 3.5s
     }
-    /*SECCION 0KM INGRESOS*/
-    .seccion-nuevos{
+    .seccion-box{
+        width: 68rem;
+        padding: 2rem;
+        margin: 0 0 2rem 15rem;
+        .ingresos-h3{
+            font-size: 2.5rem;
+        }
+        .ingresos-p{
+        font-size: 1.8rem;
+        }
+    }
+    /*SECCION deportivos INGRESOS*/
+    .seccion-deportivos,.seccion-SUV,.seccion-sedanes{
+        width: 100rem;
+        max-width: none;
         @include flex-wrap;
-        gap: 2rem;
-        margin:1vh 0vw 1vh 5vw;
-        .nuevo-ingreso{
+        justify-content: space-around;
+        margin:1vh 0vw 1vh 10rem;
+        padding: 2rem;
+        .card-body{
             text-align: center;
         }
         .ingresos-box{
             background-color: #fff;
             border-radius: 20px;
-        }
-        .ingresos-box a {
-            text-decoration: none;
-            color: #000;
+            width: 30rem;
         }
         .ingresos-img{
+            margin-top: 0;
+            padding: 0;
+            object-fit: cover;
+            height: 15rem;
+            max-height: none;
             border-radius: 20px;
             background-color: transparent;
         }
         .ingreso-h{
-            font-size: 2em;
-        }
-    }
-    /*SECCION-USADOS-INGRESOS*/
-    .seccion-usados{
-        @include flex-wrap;
-        gap: 2rem;
-        margin:1vh 0vw 1vh 5vw;
-        .usado-ingreso{
-            text-align: center;
-        }
-        .usados-box{
-            background-color: #fff;
-            border-radius: 20px;
-        }
-        .usados-box a{
-            text-decoration: none;
-            color: #000;
+            font-size: 1.7rem;
         }
     }
     .btn-ingresos-wrapper{
         width: 100%;
         height: 5rem;
         text-align: center;
-    }
-    #btn-ingresos{
-        width: 15rem;
+        }
+        #btn-ingresos{
+        width: 25rem;
+        padding: 1rem;
         font-size: 1.8em;
-    }
+        letter-spacing: 3px;
+        margin-top: 1rem;
+        }
     /*SECCION FOOTER*/
     .footer{
         min-width: 100%;
@@ -593,7 +663,7 @@
             margin-bottom: 10px;
         }
         #footer-img{
-            width: 12rem;
+            width: 8rem;
             max-width: none;
             padding: 0;
             margin: 0;
@@ -615,7 +685,7 @@
             margin-right: 0rem;
         }
         .footer-h{
-            font-size: 2.1rem;
+            font-size: 1.8rem;
             margin-bottom: 0.5rem;
             }
         .list-section ul{
@@ -623,13 +693,9 @@
             padding: 0;
             margin: 0.5rem 0 0 0;
         }
-        .list-item{
-            margin-bottom: 0.4rem;
-        }
         .list-link{
-            text-decoration: none;
-            color: #000;
-            font-size: 1.8em;
+            margin-bottom: 0.4rem;
+            font-size: 1.4rem;
             transition: color 0.3s ease;
         }
         .footer-redes{
@@ -824,47 +890,101 @@
         font-size: 1.4em;
         letter-spacing: 2px;
     }
-    .ficha-container{
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        background-color: #686D76;
-        margin-top: 2rem;
-        padding: 1rem;
-    }
-    .ficha-container h2{
-        text-align: center;
-        color: #fff;
-        padding: 1rem;
-        font-size: 3em;
-        text-decoration: underline;
-        letter-spacing: 2px;
-    }
-    .table{
-        border-radius: 10px;
-        font-size: 1.6em;
-        border: 1px solid #ddd;
-    }
-    .table tr{
-        width: 15rem;
-        background-color: transparent;
-    }
-    .table th{
-        letter-spacing: 3px;
-        color: #fff;
-        font-weight: 300;
-        border-bottom: 1px solid #ddd;
-        background-color: transparent;
-    }
-    .table td{
-        background-color: transparent;
-        letter-spacing: 3px;
-        color: #fff;
-    }
     .img-mobile-box{
         display: none;
     }
+    .ficha-tecnica{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
+        gap: 2rem;
+        padding: 2rem;
+        margin-top: 5rem;
+        width: 100%;
+        max-width: none;
+        height: 45rem;
+        max-height: none;
+        .ficha-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+            gap: 1rem;
+            background: #f5f5f5;
+            padding: 1rem;
+            width: 35rem;
+            max-width: none;
+            border-radius: 8px;
+        }
+        .ficha-title{
+            text-align: center;
+            margin-left: 50%;
+            width: 100%;
+        }
+        .ficha-item {
+            width: 16rem;
+            max-width: none;
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            font-size: 1.5rem;
+        }
+    }
+    /*NOSOTROS.HTML*/
+    .seccion-intro{
+        width: 100%;
+        padding: 1rem;
+        max-width: none;
+        justify-content: center;
+        margin: 10rem 0 5rem 0rem;
+            .seccion-h{
+        font-size: 3.5rem;
+    }
+    .seccion-p{
+        font-size: 2rem;
+    }
+    }
+    /*NOSOTROS.HTML*/
+    .historia-section{
+        @include flex-wrap;
+        padding: 3rem;
+    }
+    .historia-box{
+        @include flex-wrap;
+        width: 100%;
+        justify-content: space-between; /* o space-between, según quieras */
+        align-items: center;
+        gap: 1rem;
+    }
+    .img-container{
+        width: 45rem;
+        height: auto;
+        justify-content: center;
+        max-height: none;
+        max-width: none;
+        .historia-img{
+        width: 100%;
+        max-width: none;
+        object-fit: fill;
+        height: auto;
+        padding: 2rem;
+        margin: 0 auto;
+        }
+        .img-container,.historia-card{
+        flex: 1 1 300px; /* Crece, reduce, base mínima */
+        max-width: 50%;  /* Para que no se pase de la mitad */
+        box-sizing: border-box;
+        }
+        .historia-card{
+            height: 20rem;
+        }
+        .historia-final{
+            font-size: 2rem;
+            width: 20rem;
+        }
+    }
 }
-@media (min-width:300px) and (max-width:999px){
+/*MOBILE*/
+@media (min-width:300px) and (max-width:500px){
     /*PONIENDO CADA SECCION DEL INDEX EN GRID*/
     body{
         margin: 0;
@@ -874,10 +994,11 @@
         gap: 1.5rem;
         padding: 1rem;
     }
-    .seccion-accesos-rapidos,.seccion-nuevos,.seccion-usados{
+    .seccion-accesos-rapidos,.seccion-deportivos,.seccion-sedanes,.seccion-SUV{
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        justify-content: center;
     }
     .footer-navbar{
         display: grid;
@@ -892,9 +1013,11 @@
     }
     /*SECCION HEADER Y NAVBAR*/
     #navbar-img,#footer-img{
-        max-width: 4rem;
+        max-width: 7rem;
     }
     #navbar-menu{
+        width: 99%;
+        max-width: none;
         text-align: center;
     }
     #navbar-link{
@@ -903,87 +1026,87 @@
     #search-text{
         font-size: 1.6em;
     }
+    /*CARROUSEL*/
+    #banner{
+        display: none;
+    }
     /*SECCION MAIN Y ACCESOS RÁPIDOS*/
     #main-title{
         margin-top: 5rem;
         color: #fff;
-        font-size: 2.5em;
+        font-size: 2rem;
         text-align: center;
     }
     #access-card{
+        width: 18rem;
+        margin-left: 0.3rem;
+        max-height: none;
         max-width: none;
+        text-align: center;
     }
     #access-img{
-        width: 9rem;
-        max-width: none;
+        object-fit: cover;
+        max-height: none;
     }
     .card-h{
-        font-size: 2em;
+        font-size: 1.4rem;
     }
     .card-p{
-        font-size: 1.5em;
+        font-size: 1.2rem;
     }
     /*SECCIÓN DE BÚSQUEDA*/
     .seccion-busqueda{
         @include flex-wrap;
         text-align: center;
-        gap: 1.8rem;
+        gap: 1.5rem;
     }
     #busqueda-titulo{
         text-align: center;
-        font-size: 2.5em;
+        font-size: 1.7rem;
     }
     .box{
-        background-color: #e1d14395;
-        padding: 2rem;
-        width: 100%;
+        padding: 1rem;
+        width: 18rem;
         max-width: none;
         height: auto;
     }
     #txt-busqueda{
-        font-size: 1.4em;
+        font-size: 1rem;
     }
     #label-busq{
-        font-size: 2em;
-        margin-left: 1.2rem;
+        font-size: 1rem;
+        margin:0;
+    }
+        .seccion-box{
+        width: 18rem;
+        padding: 1rem;
+        margin: 2rem 0 2rem 0.3rem;
+        .ingresos-h3{
+            font-size: 1.5rem;
+        }
+        .ingresos-p{
+        font-size: 1rem;
+        }
     }
     /*SECCIÓN USADOS Y NUEVOS*/
     #titulo-seccion{
         text-align: center;
-        font-size: 2.5em;
+        font-size: 2rem;
     }
-    .nuevo-ingreso{
-        text-align: center;
+    .card-body{
+    text-align: center;
     }
-    .ingresos-box{
-        width: 100%;
-        max-width: none;
-        background-color: #fff;
-        border-radius: 20px;
-    }
-    .ingresos-box a {
-        text-decoration: none;
-        color: #000;
-    }
-    .ingreso-h{
-        font-size: 2em;
-    }
+        .ingresos-box{
+            background-color: #fff;
+            border-radius: 20px;
+            width: 18rem;
+            margin-left: 0.3rem;
+        }
     .ingresos-img{
-        width: 100%;
-        max-width: none;
+        object-fit: fill;
+        max-height: none;
         border-radius: 20px;
         background-color: transparent;
-    }
-    .usado-ingreso{
-        text-align: center;
-    }
-    .usados-box{
-        background-color: #fff;
-        border-radius: 20px;
-    }
-    .usados-box a{
-        text-decoration: none;
-        color: #000;
     }
     .btn-ingresos-wrapper{
         width: 100%;
@@ -991,15 +1114,16 @@
         text-align: center;
     }
     #btn-ingresos{
-        width: 12rem;
+        width: 15rem;
         font-size: 1.5em;
     }
     /*SECCION FOOTER*/
     .footer{
-        min-width: 100%;
+        width: 100%;
+        max-width: none;
         background-color: #fff;
         margin:0;
-        padding: 2rem;
+        padding: 1rem;
         color: #000;
     }
     .footer-navbar{
@@ -1007,15 +1131,15 @@
         max-width: none;
     }
     .footer-list{
+        width: 100%;
+        max-width: none;
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
-        list-style: none;
         padding: 0;
         text-align: center;
     }
     .list-section{
-        list-style: none;
         padding: 0;
         margin-right: 0rem;
     }
@@ -1028,15 +1152,16 @@
     .list-link{
         text-decoration: none;
         color: #000;
-        font-size: 1.8em;
+        font-size: 1.3rem;
         transition: color 0.3s ease;
     }
     .footer-h{
-    font-size: 2.1em;
+    max-width: 100%;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     }
     .footer-line{
-        width:auto;
+        width:100%;
         max-width: none;
         background-color: #000;
         padding: 1px;
@@ -1049,20 +1174,28 @@
     .footer-redes-li{
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        list-style: none;
+        gap: 1rem;
         max-width: none;
         height: auto;
         width: auto;
     }
     .footer-redes-h{
         text-align: center;
-        font-size: 2.1rem;
+        font-size: 1.5rem;
     }
     .footer-redes-img{
-        width: 2.5rem;
+        width: 2rem;
         max-width: none;
     }
+.footer-list,
+.footer-list ul,
+.list-section,
+.list-section ul,
+.list-item,.footer-redes,.footer-redes-li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
     /*NUEVOS.HTML*/
     .main-h{
         font-size: 2em;
@@ -1260,3 +1393,418 @@
             color: #fff;
         }
     }
+/*TABLET*/
+@media (min-width:501px) and (max-width:1000px){
+    /*PONIENDO CADA SECCION DEL INDEX EN GRID*/
+    body{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns:1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    .seccion-accesos-rapidos,.seccion-deportivos,.seccion-SUV,.seccion-sedanes{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .footer-navbar{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    .footer-list,.footer-redes{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    /*SECCION HEADER Y NAVBAR*/
+    #navbar-img,#footer-img{
+        max-width: 5.5rem;
+    }
+    #navbar-menu{
+        text-align: center;
+    }
+    #navbar-link{
+        font-size: 2em;
+    }
+    #search-text{
+        font-size: 1.6em;
+    }
+    /*CARROUSEL*/
+    #banner,.carousel-control-next,.carousel-control-prev{
+        display: none;
+    }
+    
+    /*SECCION MAIN Y ACCESOS RÁPIDOS*/
+    #main-title{
+        margin-top: 5rem;
+        color: #fff;
+        font-size: 2.5em;
+        text-align: center;
+    }
+    #access-card{
+        width: 32rem;
+        max-width: none;
+        height: 15rem;
+        max-height: none;
+        text-align: center;
+        margin-left: 8rem;
+    }
+    #access-img{
+        width: 12rem;
+        max-width: none;
+    }
+    .card-h{
+        font-size: 2em;
+    }
+    .card-p{
+        font-size: 1.5em;
+    }
+    /*SECCIÓN DE BÚSQUEDA*/
+    .seccion-busqueda{
+        @include flex-wrap;
+        text-align: center;
+        gap: 1.8rem;
+    }
+    #busqueda-titulo{
+        text-align: center;
+        font-size: 2.5em;
+    }
+    .box{
+        padding: 2rem;
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+    #txt-busqueda{
+        font-size: 1.4em;
+    }
+    #label-busq{
+        font-size: 2em;
+        margin-left: 1.2rem;
+    }
+    /*SECCIÓN USADOS Y NUEVOS*/
+    #titulo-seccion{
+        text-align: center;
+        font-size: 2.5em;
+    }
+    .seccion-box{
+    width: 35rem;
+    padding: 1rem;
+    margin: 2rem 0 2rem 5rem;
+        .ingresos-h3{
+        font-size: 1.8rem;
+    }
+        .ingresos-p{
+        font-size: 1.5rem;
+    }
+    }
+        .card-body{
+    text-align: center;
+    }
+        .ingreso-h{
+        font-size: 2rem;
+    }
+    .card-body a{
+        width: 15rem;
+        font-size: 2rem;
+    }
+        .ingresos-box{
+            background-color: #fff;
+            border-radius: 20px;
+            width: 35rem;
+            margin-left: 5rem;
+        }
+    .ingresos-img{
+        object-fit: fill;
+        max-height: none;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+    .btn-ingresos-wrapper{
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    #btn-ingresos{
+        width: 20rem;
+        font-size: 1.5em;
+    }
+    /*SECCION FOOTER*/
+    .footer{
+        min-width: 100%;
+        background-color: #fff;
+        margin:0;
+        padding: 1rem;
+        color: #000;
+    }
+    .footer-navbar{
+        width: 100%;
+        max-width: none;
+    }
+    .footer-list{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+    .list-section{
+        list-style: none;
+        padding: 0;
+        margin-right: 0rem;
+    }
+    .list-section ul{
+        list-style: none;
+    }
+    .list-item{
+        margin-bottom: 0.4rem;
+    }
+    .list-link{
+        text-decoration: none;
+        color: #000;
+        font-size: 1.8em;
+        transition: color 0.3s ease;
+    }
+    .footer-h{
+    font-size: 2.1em;
+    margin-bottom: 0.5rem;
+    }
+    .footer-line{
+        width:auto;
+        max-width: none;
+        background-color: #000;
+        padding: 1px;
+        margin-bottom: 10px;
+    }
+    .footer-redes{
+        width: 100%;
+        max-width: none;
+    }
+    .footer-redes-li{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        list-style: none;
+        max-width: none;
+        height: auto;
+        width: auto;
+    }
+    .footer-redes-h{
+        text-align: center;
+        font-size: 2.1rem;
+    }
+    .footer-redes-img{
+        width: 2.5rem;
+        max-width: none;
+    }
+    .footer-list,
+.footer-list ul,
+.list-section,
+.list-section ul,
+.list-item,.footer-redes,.footer-redes-li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    /*NUEVOS.HTML*/
+    .main-h{
+        font-size: 2em;
+        margin-top: 4rem;
+        color: #fff;
+        text-align: center;
+    }
+    .seccion-cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .filtros-busqueda{
+            width: 100%;
+            max-width: none;
+            overflow-y: auto;
+            padding: 1rem;
+            background-color:#686D76;
+            border: 1px solid #fff;
+            height: auto;
+            margin-left:0;
+        }
+        .seccion-catalogo{
+            margin: 0;
+            display: grid;
+            gap: 2rem;
+            padding: 0 1rem 1rem 0;
+        }
+        .filtros-busqueda h3{
+            text-align: center;
+            font-size: 1.8rem;
+            color: #fff;
+            text-decoration:underline;
+        }
+        .filtro{
+            margin-bottom: 2rem;
+        }
+        .filtro h4{
+            margin-bottom: 0.5rem;
+            font-size: 1.8em;
+            padding-bottom: 0.3rem;
+            text-align: center;
+            text-decoration: underline;
+        }
+        #label-filtro{
+            font-size: 1.4em;
+        }
+        .card-box{
+            width: 100%;
+            max-width: none;
+            height: auto;
+        }
+        .carta-catalogo{
+            flex: 1 1 250px;
+            width: 100%;
+            max-width: none;
+            height: auto;
+            margin-left: 0;
+            max-height: none;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .carta-catalogo a{
+            text-decoration: none;
+            color: #000;
+        }
+        .card-img{
+            border-radius: 10px 10px 0px 0px;
+            border-bottom: 2px solid #000;
+        }
+        .titulo-carta{
+            font-size: 1.4em;
+            letter-spacing: 1.5px;
+        }
+        .card-list{
+            height: 136px;
+            margin-left: 20px;
+            text-align: start;
+            max-height: none;
+            padding: 20px;
+        }
+        .card-list-item{
+            font-size: 1.4em;
+            letter-spacing: 2px;
+        }
+        .btn-acordeon{
+            font-size: 1em;
+        }
+        /*FICHA-TECNICA*/
+        .ficha-titulo{
+            margin-top: 5rem;
+            text-align: center;
+            color: #fff;
+            font-size: 2.1em;
+        }
+        .carrusel-imagenes{
+            display: none;
+        }
+        .galeria-mobile{
+            background-color: #686D76;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .galeria-mobile img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .galeria-mobile h3{
+            text-align: center;
+            letter-spacing: 2px;
+            color: #fff;
+            padding: 5px;
+            text-decoration: underline;
+            font-size: 1.4em;
+        }
+        .form-container{
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: #686D76;
+            width: 15rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .form-container h2,p{
+            text-align: center;
+            color: #fff;
+            letter-spacing: 1.5px;
+        }
+        .form-container p{
+            font-size: 1.2em;
+        }
+        .form-input, .form-textarea{
+            width: auto;
+            margin-left: 1rem;
+            border: 1px solid black;
+            letter-spacing: 1px;
+            font-size: 1em;
+            height: auto;
+            max-width: auto;
+        }
+        .form-label{
+            color: #fff;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            text-decoration: underline;
+            margin-left: 1rem;
+        }
+        .form-btn{
+            text-align: center;
+            margin-left: 3rem;
+            width: 5rem;
+            max-width: auto;
+            height: 2rem;
+            max-height: auto;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+        }
+        .ficha-container{
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #686D76;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+        .ficha-container h2{
+            text-align: center;
+            color: #fff;
+            padding: 1rem;
+            font-size: 2em;
+            text-decoration: underline;
+            letter-spacing: 2px;
+        }
+        .table{
+            border-radius: 10px;
+            font-size: 1.2em;
+            border: 1px solid #ddd;
+        }
+        .table tr{
+            width: 10rem;
+            background-color: transparent;
+        }
+        .table th{
+            letter-spacing: 3px;
+            color: #fff;
+            font-weight:normal;
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+        }
+        .table td{
+            background-color: transparent;
+            letter-spacing: 3px;
+            color: #fff;
+        }
+}

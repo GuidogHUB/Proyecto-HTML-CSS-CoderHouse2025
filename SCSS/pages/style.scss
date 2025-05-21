@@ -2,23 +2,23 @@
 
 @use '../base/extends.scss' as *;
 
-@use '../components/ButtonsInputs';
+@use '../components/ButtonsInputs.scss';
 
-@use '../components/cards';
+@use '../components/cards.scss';
 
-@use '../components/footer';
+@use '../components/footer.scss';
 
-@use '../components/navbar';
+@use '../components/navbar.scss';
 
-@use '../layout/grid';
+@use '../layout/grid.scss';
 
-@use 'main';
+@use 'main.scss';
 
-@use '../layout/mediaqueries';
+@use '../layout/mediaqueries.scss';
 
-@use 'catalogo';
+@use 'catalogo.scss';
 
-@use 'ficha_tecnica';
+@use 'ficha_tecnica.scss';
 
 
 

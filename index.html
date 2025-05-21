@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -15,10 +18,10 @@
 <body>
     <!--CONTENIDO HEADER-->
     <header class="header-menu">
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" id="navbar-menu">
+        <nav class="navbar fixed-top navbar-expand-lg" id="navbar-menu">
             <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./multimedia/Luxury-motors.png" alt="LUXURY-MOTORS" srcset="" id="navbar-img">
+                <img src="./multimedia/Logo.ico" alt="LUXURY-MOTORS" srcset="" id="navbar-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="ul-navbar">
                 <li class="nav-item" id="item-navbar">
-                    <a class="nav-link active" aria-current="page" id="navbar-link" href="#">INICIO</a>
+                    <a class="nav-link active" aria-current="page" id="navbar-link" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" id="navbar-link" href="./pages/nuevos.html" target="_blank">0km</a>
@@ -38,13 +41,10 @@
                     <a href="" class="nav-link active"id="navbar-link" aria-current="page">Planes</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link active"id="navbar-link" aria-current="page">¿Quienes Somos?</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link active" id="navbar-link" aria-current="page">Novedades</a>
+                    <a href="./pages/nosotros.html" class="nav-link active"id="navbar-link" aria-current="page">Nosotros</a>
                 </li>
                 </ul>
-                <form class="d-flex" role="search">
+                <form class="d-flex form-busqueda" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-text">
                 <button class="btn btn-outline-success" type="submit" id="search-button">BUSCAR</button>
                 </form>
@@ -52,135 +52,228 @@
             </div>
         </nav>
     </header>
-    <h1 id="main-title" class="animate__animated animate__fadeInUp">¡TE DAMOS LA BIENVENIDA A LUXURY-MOTORS!</h1>
 <!--CONTENIDO MAIN-->
+<main>
+    <div id="carouselBanner" class="carousel slide carrousel">
+    <div class="carousel-inner" id="banner">
+    <div class="carousel-item active contenedor-banner">
+    <img src="./multimedia/banner-img-1.png" class="d-block w-100 img-banner carrousel-img" alt="Banner 1">
+    <div class="carousel-caption banner-caption banner-index">
+        <h2 class="fs-1 text-center banner-h">Somos Luxury-motors</h2>
+        <p class="fs-2 text-start banner-p">La concesionaria de autos deportivos de lujo N°1 del país, con 10 años de trayectoria en el rubro. Experiencia, lujo y confort garantizados.</p>
+    </div>
+    </div>
+    <div class="carousel-item active contenedor-banner">
+    <img src="./multimedia/banner-img-2.png" class="d-block w-100 img-banner carrousel-img" alt="Banner 2">
+    <div class="carousel-caption banner-caption banner-index">
+        <h2 class="fs-1 text-center banner-h">Gran variedad de modelos</h2>
+        <p class="fs-2 text-start banner-p">Las mejores marcas de autos deportivos de lujo, las encontras acá</p>
+    </div>
+    </div>
+    <div class="carousel-item active contenedor-banner">
+    <img src="./multimedia/banner-img-3.png" class="d-block w-100 img-banner carrousel-img" alt="Banner 3">
+    <div class="carousel-caption banner-caption banner-index">
+        <h2 class="fs-1 text-center banner-h">Deportividad y lujo combinados con seguridad</h2>
+        <p class="fs-2 text-start banner-p">Te brindamos las mejores opciones de seguro para tu vehículo. Manejá tranquilo, del resto nos ocupamos nosotros.</p>
+    </div>
+    </div>
+    </div>
+    <button class="carousel-control-prev d-none d-md-block " type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon carrousel-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+</div>
+    <h1 id="main-title" class="animate__animated animate__fadeInUp">¡TE DAMOS LA BIENVENIDA A LUXURY-MOTORS!</h1>
 <section class="seccion-accesos-rapidos">
-    <div class="card text-center border-light text-bg-dark" id="access-card">
-        <a href="./pages/nuevos.html" target="_blank" rel="noopener noreferrer">
-            <img src="./multimedia/0km-acceso.png" class="card-img-top" alt="AUTOS-0KM" id="access-img">
+        <div class="card mb-3" id="access-card">
+    <div class="row g-0">
+        <div class="col-md-4" id="contenedor-img">
+        <a href="./pages/nuevos.html" target="_self" rel="noopener noreferrer">
+            <img src="./multimedia/0km-acceso.png" class="img-fluid rounded-start" alt="ACCESO 0KM" id="access-img">
         </a>
+        </div>
+    <div class="col-md-8">
         <div class="card-body">
-        <h4 class="card-h">COMPRÁ TU 0KM</h4>
-        <p class="card-p">ENCONTRÁ EL AUTO DE TU MARCA PREFERIDA</p>
+            <h4 class="card-h">COMPRÁ TU 0KM</h4>
+            <p class="card-p">Encontrá tu nuevo auto entre las mejores marcas.</p>
+        </div>
         </div>
     </div>
-    <div class="card text-center border-light text-bg-dark" id="access-card">
-        <a href="./pages/usados.html" target="_blank" rel="noopener noreferrer">
-            <img src="./multimedia/usados.png" class="card-img-top" alt="AUTOS USADOS" id="access-img">
+</div>
+<div class="card mb-3" id="access-card">
+    <div class="row g-0">
+        <div class="col-md-4" id="contenedor-img">
+        <a href="./pages/usados.html" target="_self" rel="noopener noreferrer">
+            <img src="./multimedia/usados.png" class="img-fluid rounded-start" alt="ACCESO USADOS" id="access-img">
         </a>
+        </div>
+    <div class="col-md-8">
         <div class="card-body">
-        <h5 class="card-h">AUTOS USADOS</h5>
-        <p class="card-p">COMPRÁ O VENDÉ AUTOS USADOS Y CON GARANTÍA</p>
+            <h4 class="card-h">AUTOS USADOS</h4>
+            <p class="card-p">Comprá o Vendé autos usados con la mejor garantía</p>
+        </div>
         </div>
     </div>
-    <div class="card text-center border-light text-bg-dark"id="access-card">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src="./multimedia/financiamiento.png" class="card-img-top" alt="AUTOS-0KM" id="access-img">
+</div>
+<div class="card mb-3" id="access-card">
+    <div class="row g-0 cont">
+        <div class="col-md-4" id="contenedor-img">
+        <a href="#" target="_self" rel="noopener noreferrer">
+            <img src="./multimedia/financiamiento.png" class="img-fluid rounded-start" alt="ACCESO FINANCIAMIENTO" id="access-img">
         </a>
+        </div>
+    <div class="col-md-8">
         <div class="card-body">
-        <h5 class="card-h" >FINANCIAMIENTO</h5>
-        <p class="card-p">CONONCÉ LOS PLANES QUE TENEMOS PARA VOS</p>
+            <h4 class="card-h">FINANCIAMIENTO</h4>
+            <p class="card-p">Conocé los distintos planes que tenemos para vos!</p>
+        </div>
         </div>
     </div>
+</div>
 </section>
 <h2 id="busqueda-titulo" class="animate__animated animate__lightSpeedInLeft">BUSCÁ TU MODELO PREFERIDO</h2>
         <div class="box">
             <section class="seccion-busqueda">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="txt-busqueda">
-                <label class="label-busqueda" id="label-busq">Nuevo<input type="checkbox" name="" class="checkbox-busqueda" id="checkbox-busqueda"></label>
-                <label class="label-busqueda" id="label-busq">Usado<input type="checkbox" name="" class="checkbox-busqueda" id="checkbox-busqueda"></label>
+                <input class="form-control me-2" type="search" placeholder="NOMBRE O MARCA DEL VEHÍCULO" aria-label="Search" id="txt-busqueda">
+                <label class="label-busqueda" id="label-busq"><input type="checkbox" name="" class="checkbox-busqueda" id="checkbox-busqueda">DEPORTIVO</label>
+                <br>
+                <label class="label-busqueda" id="label-busq"><input type="checkbox" name="" class="checkbox-busqueda" id="checkbox-busqueda">SEDÁN</label>
+                <br>
+                <label class="label-busqueda" id="label-busq"><input type="checkbox" name="" class="checkbox-busqueda" id="checkbox-busqueda">SUV</label>
             </section>
         </div>
-<h2 id="titulo-seccion" class="animate__animated animate__fadeInRight">ÚLTIMOS 0KM INGRESADOS</h2>
-        <section class="seccion-nuevos">
-            <article class="nuevo-ingreso">
-                <div class="ingresos-box">
-                    <a href="./pages/peugeot_208_ficha.html" target="_blank">
-                        <img src="./multimedia/peugeot-208.jpg" alt="RENAULT SANDERO" class="ingresos-img">
-                        <h3 class="ingreso-h">PEUGEOT-208</h3>
-                    </a>
+<h2 id="titulo-seccion">LUXURY-PERFORMANCE</h2>
+        <div class="seccion-box">
+            <h3 class="ingresos-h3">¿QUÉ ES LUXURY-PERFORMANCE?</h3><br>
+        <p class="ingresos-p">Luxury-Performance es nuestra colección de autos deportivos de lujo, combinando velocidad, diseño y tecnología con las marcas mas prestigiosas del mundo.</p>
+            <h4 class="ingresos-h4">ESTOS SON LOS ÚLTIMOS MODELOS INGRESADOS</h4>
+    </div>
+        <section class="seccion-deportivos">
+            <div class="card ingresos-box">
+                <img src="./multimedia/audi-rs5-coupe.png" class="card-img-top ingresos-img" alt="AUDI RS5 COUPÉ">
+                <div class="card-body">
+                    <h5 class="card-title ingreso-h">Audi RS5 Coupé</h5>
+                    <a href="#" class="btn btn-primary">VER MÁS</a>
                 </div>
-            </article>
-            <article class="nuevo-ingreso">
-                <div class="ingresos-box">
-                    <a href="./pages/nissan_versa_ficha.html" target="_blank">
-                        <img src="./multimedia/versa.jpg" alt="NISSAN VERSA" class="ingresos-img">
-                        <h3 class="ingreso-h">NISSAN VERSA</h3>
-                    </a>
                 </div>
-            </article>
+                <div class="card ingresos-box">
+                <img src="./multimedia/porsche-gt3-frente1.png" class="card-img-top ingresos-img" alt="PORSCHE 911 GT3">
+                <div class="card-body">
+                    <h5 class="card-title ingreso-h">Porsche 911 GT3</h5>
+                    <a href="#" class="btn btn-primary">VER MÁS</a>
+                </div>
+            </div>
+                <div class="card ingresos-box">
+                <img src="./multimedia/bmw-430i.png" class="card-img-top ingresos-img" alt="BMW 430I COUPÉ">
+                <div class="card-body">
+                    <h5 class="card-title ingreso-h">BMW 430i COUPÉ</h5>
+                    <a href="#" class="btn btn-primary">VER MÁS</a>
+                </div>
+            </div>
             <div class="btn-ingresos-wrapper">
-                <button type="button" class="btn btn-outline-light btn-lg" id="btn-ingresos">
-                    <a href="./pages/nuevos.html" target="_blank">Explorar 0km</a>
+                <button type="button" class="btn btn-outline-warning" id="btn-ingresos">
+                    <a href="./pages/nuevos.html" target="_self">VER MÁS</a>
                 </button>
             </div>
         </section>
-        <h2 id="titulo-seccion">ÚLTIMOS USADOS INGRESADOS</h2>
-        <section class="seccion-usados">
-            <article class="usado-ingreso">
-                <div class="usados-box">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <img src="./multimedia/palio.jpg" alt="FIAT PALIO" class="ingresos-img">
-                        <h3 class="ingreso-h">FIAT PALIO</h3>
-                    </a>
+        <h2 id="titulo-seccion">LUXURY-SUVs</h2>
+            <div class="seccion-box">
+                <p class="ingresos-p">Descubrí nuestra gama de lujo en SUVs con las mejores marcas de lujo del mercado, combina todo el confort con la potencia y el espacio dentro de un mismo modelo.</p>
+            <h4 class="ingresos-h4">ESTOS SON LOS ÚLTIMOS MODELOS INGRESADOS</h4>
+            </div>
+        <section class="seccion-SUV">
+            <div class="card ingresos-box">
+                <img src="./multimedia/bmw-x6.png" class="card-img-top ingresos-img" alt="BMW X6 SUV">
+                <div class="card-body">
+                    <h5 class="card-title ingreso-h">BMW X6 Suv</h5>
+                    <a href="#" class="btn btn-primary">VER MÁS</a>
                 </div>
-            </article>
-            <article class="usado-ingreso">
-                <div class="usados-box">
-                    <a href="#" target="_blank">
-                        <img src="./multimedia/ford-fiesta-usado.jpg" alt="FORD FIESTA" class="ingresos-img">
-                            <h3 class="ingreso-h">FORD FIESTA</h3>
-                        </img>
-                    </a>
+            </div>
+            <div class="card ingresos-box">
+                <img src="./multimedia/mercedes-glc.png" class="card-img-top ingresos-img" alt="MERCEDES-BENZ GLC ">
+                <div class="card-body">
+                    <h5 class="card-title ingreso-h">Mercedes-Benz GLC</h5>
+                    <a href="#" class="btn btn-primary">VER MÁS</a>
                 </div>
-            </article>
+            </div>
             <div class="btn-ingresos-wrapper">
-                <button type="button" class="btn btn-outline-light btn-lg" id="btn-ingresos">
-                    <a href="./pages/usados.html" target="_blank" rel="noopener noreferrer">Explorar Usados</a>
+                <button type="button" class="btn btn-outline-warning" id="btn-ingresos">
+                    <a href="./pages/usados.html" target="_self" rel="noopener noreferrer">VER MÁS</a>
                 </button>
             </div>
         </section>
+        <h2 id="titulo-seccion">LUXURY-SEDANES</h2>
+            <div class="seccion-box">
+                <p class="ingresos-p">Descubrí nuestro catálogo de modelos sedanes junto a las marcas de lujo con más prestigio del mundo. Estos modelos son ideales para aquellos que buscan viajar con estilo, comodidad y tecnología por ciudad o por ruta. !Aprovechá y llevate el tuyo¡</p>
+            <h4 class="ingresos-h4">ESTOS SON LOS ÚLTIMOS MODELOS INGRESADOS</h4>
+            </div>
+        <section class="seccion-sedanes">
+        <div class="card ingresos-box">
+                <img src="./multimedia/mercedes-clase-e.png" class="card-img-top ingresos-img" alt="Mercedes-Benz Clase E">
+                <div class="card-body">
+                    <h5 class="card-title ingreso-h">Mercedes-Benz Clase E</h5>
+                    <a href="#" class="btn btn-primary">VER MÁS</a>
+                </div>
+            </div>
+            <div class="card ingresos-box">
+                <img src="./multimedia/audi-a6.png" class="card-img-top ingresos-img" alt="Audi A6">
+                <div class="card-body">
+                    <h5 class="card-title ingreso-h">Audi A6</h5>
+                    <a href="#" class="btn btn-primary">VER MÁS</a>
+                </div>
+            </div>
+            <div class="btn-ingresos-wrapper">
+                <button type="button" class="btn btn-outline-warning" id="btn-ingresos">
+                    <a href="./pages/usados.html" target="_self" rel="noopener noreferrer">VER MÁS</a>
+                </button>
+            </div>
+        </section>
+    </main>
+        <footer class="footer">
+            <nav class="footer-navbar">
+                <div class="footer-line"></div>
+                    <a class="navbar-brand" href="#" target="_self">
+                        <img src="./multimedia/Logo.ico" alt="LUXURY-MOTORS" srcset="" id="footer-img">
+                    </a>
+                <ul class="footer-list">
+                    <li class="list-section">
+                        <h4 class="footer-h">AUTOS</h4>
+                        <ul>
+                            <li class="list-item"><a href="./pages/usados.html" target="_self" class="list-link">AUTOS USADOS</a></li>
+                            <li class="list-item"><a href="./pages/nuevos.html"  target="_self" class="list-link">AUTOS 0KM</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-section">
+                        <h4 class="footer-h">ASESORAMIENTO</h4>
+                        <ul>
+                            <li class="list-item"><a href="#" target="_self" class="list-link">FINANCIAMIENTO</a></li>
+                            <li class="list-item"><a href="#" target="_self" class="list-link">POSVENTA</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-section">
+                        <h4 class="footer-h">LUXURY-MOTORS</h4>
+                        <ul>
+                            <li class="list-item"><a href="#" target="_self" class="list-link">NOSOTROS</a></li>
+                            <li class="list-item"><a href="#" target="_self" class="list-link">¿DONDE ENCONTRARNOS?</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="footer-redes">
+                    <h4 class="footer-redes-h">NUESTRAS REDES</h4>
+                    <li class="footer-redes-li">
+                        <a href="#" target="_self" class="footer-redes-link"><img src="./multimedia/instagram.png" alt="INSTAGRAM LOGO" class="footer-redes-img"></a>
+                        <a href="#" target="_self" class="footer-redes-link"><img src="./multimedia/facebook.png" alt="FACEBOOK LOGO" class="footer-redes-img"></a>
+                        <a href="#" target="_self" class="footer-redes-link"><img src="./multimedia/youtube.png" alt="YOUTUBE LOGO" class="footer-redes-img"></a>
+                    </li>
+                </ul>
+                <div class="footer-line"></div>
+            </nav>
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
     <!--SECCION FOOTER (PIE DE PÁGNIA)-->
-    <footer class="footer">
-        <nav class="footer-navbar">
-            <div class="footer-line"></div>
-                <a class="navbar-brand" href="#">
-                    <img src="./multimedia/Luxury-motors.png" alt="LUXURY-MOTORS" srcset="" id="footer-img">
-                </a>
-            <ul class="footer-list">
-                <li class="list-section">
-                    <h4 class="footer-h">AUTOS</h4>
-                    <ul>
-                        <li class="list-item"><a href="./pages/usados.html" target="_blank" class="list-link">AUTOS USADOS</a></li>
-                        <li class="list-item"><a href="/pages/nuevos.html"  target="_blank" class="list-link">AUTOS 0KM</a></li>
-                    </ul>
-                </li>
-                <li class="list-section">
-                    <h4 class="footer-h">ASESORAMIENTO</h4>
-                    <ul>
-                        <li class="list-item"><a href="#" class="list-link">FINANCIAMIENTO</a></li>
-                        <li class="list-item"><a href="#" class="list-link">POSVENTA</a></li>
-                    </ul>
-                </li>
-                <li class="list-section">
-                    <h4 class="footer-h">LUXURY-MOTORS</h4>
-                    <ul>
-                        <li class="list-item"><a href="" class="list-link">NOSOTROS</a></li>
-                        <li class="list-item"><a href="" class="list-link">¿DONDE ENCONTRARNOS?</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="footer-redes">
-                <h4 class="footer-redes-h">NUESTRAS REDES</h4>
-                <li class="footer-redes-li">
-                    <a href="#" class="footer-redes-link"><img src="./multimedia/instagram.png" alt="INSTAGRAM LOGO" class="footer-redes-img"></a>
-                    <a href="#" class="footer-redes-link"><img src="./multimedia/facebook.png" alt="FACEBOOK LOGO" class="footer-redes-img"></a>
-                    <a href="#" class="footer-redes-link"><img src="./multimedia/youtube.png" alt="YOUTUBE LOGO" class="footer-redes-img"></a>
-                </li>
-            </ul>
-            <div class="footer-line"></div>
-        </nav>
-    </footer>
+
 </html>
