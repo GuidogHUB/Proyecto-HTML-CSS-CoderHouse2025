@@ -108,6 +108,86 @@ body{
 #btn-ingresos:hover{
     color: #000 !important; 
 }
+/*DEPORTIVOS.HTML*/
+.main-h{
+    color: #fff;
+}
+.filtros-catalogo{
+    max-width: none;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    background-color: #f8f9fa;
+}
+.filtro-titulo{
+    font-weight: bold;
+    color: #333;
+}
+filtros-catalogo label {
+    color: #555;
+    cursor: pointer;
+}
+.auto-card{
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+.auto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.btn-ficha{
+    background-color: #ffc107;
+    color: #000;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.btn-ficha:hover {
+    background-color: #e0a800;
+}
+/*FICHA TÉCNICA*/
+.ficha-titulo{
+    text-align: center;
+    color: #fff;
+}
+.carrusel-btn{
+    background-color: #fff6;
+    border:1px solid #fff;
+}
+.form-container{
+    border: 1px solid #ddd;
+    background-color: #686D76;
+}
+    .form-container h2,p{
+        text-align: center;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+    .form-label{
+        color: #fff;
+        letter-spacing: 2px;
+        text-decoration: underline;
+    }
+.form-btn{
+    text-align: center;
+    letter-spacing: 2px;
+}
+.ficha-grid{
+    background: #f5f5f5;
+}
+.ficha-title{
+    text-align: center;
+}
+.ficha-item {
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
 /*NOSOTROS.HTML*/
 .historia-section{
     background: rgba(100, 100, 100, 0.5);

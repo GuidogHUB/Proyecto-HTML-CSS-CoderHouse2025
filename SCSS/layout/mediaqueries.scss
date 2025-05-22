@@ -1,7 +1,7 @@
 @use '../base/variables' as *;
 /*MEDIA QUERIES*/
 /*DESKTOP 1*/
-@media(min-width:1001px) and (max-width:1400px){ 
+@media(min-width:769px) and (max-width:1279px){ 
     /*BODY,NAVBAR Y CONTENIDO MAIN*/
     body{
         display: flex;
@@ -14,9 +14,9 @@
     }
     #main-title{
         @include font-size(2.5rem);
-        width: 65rem;
+        width: 100%;
         padding: 1rem;
-        margin: 18vh 0vw 0vh 5vw;
+        margin-top: 18vh;
         letter-spacing: 0.2em;
         text-align: center;
     }
@@ -26,8 +26,13 @@
         width: 100%;
         max-height: none;
         margin-top: 5rem;
+        }
+        #banner{
+            width: 100%;
+        }
         .carrousel-img{
             height: 65vh;
+            width: 100%;
             object-fit: cover;
         }
         .banner-index{
@@ -41,7 +46,7 @@
         .banner-p{
             font-size: 1.2rem !important;
         }
-    }
+    
     #busqueda-titulo{
         text-align: center;
         padding: 1rem 1rem 1rem 1rem;
@@ -58,20 +63,17 @@
         height: 5rem;
     }
     #ul-navbar{
-        width: 25rem;
+        width: 35rem;
         max-width: none;
         gap: 0.5rem;
     }
     .navbar-link{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     #search-text{
         width: 17rem;
         max-width: none;
         height: auto;
-    }
-    .form-busqueda{
-        margin-right: 10rem;
     }
     .seccion-accesos-rapidos{
         @include flex-wrap;
@@ -80,7 +82,7 @@
         height: auto;
         margin:5vh 0vw 5vh 0;
         justify-content: space-around;
-            #access-card{
+        #access-card{
         width: 28rem;
         justify-content: center;
         max-width: none;
@@ -111,7 +113,6 @@
     .seccion-busqueda{
         @include flex-wrap;
         gap: 1rem;
-        border: 1px solid red;
         width: 100%;
         max-width: none;
         height: auto;
@@ -203,10 +204,10 @@
     .footer-list{
         list-style: none;
         padding: 0;
-        margin: 0 0 0 2rem;
+        margin: 0;
         @include flex-wrap;
         justify-content: space-around;
-        width: 45rem;
+        width: 35rem;
     }
     .list-section{
         min-width: 150px;
@@ -223,16 +224,16 @@
     }
     .list-link{
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         transition: color 0.3s ease;
     }
     #footer-img{
-        max-width: 8rem;
+        max-width: 6rem;
         padding: 0;
         margin: 0;
     }
     .footer-h{
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
     }
     .footer-line{
@@ -240,7 +241,8 @@
         margin-bottom: 10px;
     }
     .footer-redes{
-        width: 22rem;
+        justify-content: center;
+        width: 15rem;
     }
     .footer-redes-li{
         list-style: none;
@@ -248,16 +250,16 @@
         justify-content: space-around;
         max-width: none;
         height: auto;
-        width: 18rem;
-        padding: 0 1rem 1rem 1rem;
-        margin-left: 20px;
+        width: 15rem;
+        padding: 1rem;
+        margin-left: 3rem;
     }
     .footer-redes-h{
         text-align: center;
-        font-size: 1.8rem;
+        font-size: 1rem;
     }
     .footer-redes-img{
-        width: 35px;
+        width: 2rem;
         max-width: none;
     }
     .footer-list,
@@ -269,193 +271,220 @@
     margin: 0;
     padding: 0;
 }
-            /*CATÁLOGOS*/
+    /*DEPORTIVOS.HTML*/
             .seccion-catalogo{
                 margin: 0;
                 display: grid;
                 grid-template-columns: 25rem 1fr;
                 gap: 2rem;
+                width: 100%;
                 padding: 0 1rem 1rem 0;
             }
             .main-h{
-                margin: 20vh auto 0 auto;
-                font-size: 3.5rem;
-                width: 70rem;
+                margin-top: 8rem;
+                font-size: 2.5rem;
+                width: 100%;
                 padding: auto;
-                letter-spacing: 2px;
-            }
-            .filtros-busqueda{
-                width: 20rem;
-                max-width: auto;
-                overflow-y: auto;
-                padding-right: 10px;
-                padding: 1.5rem;
-                position: sticky;
-                top: 0;
-                gap: 3rem;
-                height: 100vh;
-                margin-left:0;
-            }
-            .filtros-busqueda h3{
-                font-size: 1.8rem;
-            }
-            .filtro{
-                margin-bottom: 2rem;
-            }
-            .filtro h4{
-                margin-bottom: 0.5rem;
-                font-size: 1.5em;
-                padding-bottom: 0.3rem;
-            }
-            #label-filtro{
-                font-size: 1.3em;
-            }
-            .seccion-cards{
-                @include flex-wrap;
-                flex-direction: row;
-                gap: 1rem;
-            }
-            .card-box{
-                width: 16rem;
-                max-width: none;
-                height: 26rem;
-            }
-            .carta-catalogo{
-                flex: 1 1 250px;
-                width: 15rem;
-                max-width: none;
-                height: 25rem;
-                margin-left: 0;
-                max-height: none;
-                border-radius: 10px;
-            }
-            .carta-catalogo a{
-                text-decoration: none;
-                color: #000;
-            }
-            .titulo-carta{
-                font-size: 1.4em;
-                letter-spacing: 2px;
-            }
-            .card-list{
-                height: 136px;
-                margin-left: 20px;
-                text-align: start;
-                max-height: none;
-                padding: 20px;
-            }
-            .card-list-item{
-                font-size: 1.3em;
-                letter-spacing: 2px;
-            }
-            .btn-acordeon{
-                font-size: 0.8em;
-            }
-            /*FICHAS TÉCNICAS*/
-            .ficha-titulo{
-                margin-top: 10rem;
-                font-size: 6rem;
-            }
-            .carrusel-imagenes{
-                margin-left: 5rem;
-                width: 70rem;
-                margin-top: 1rem;
-                max-width: none;
-                height: 35rem;
-            }
-            .carrusel-img-box{
-                width: 25rem;
-                height: 35rem;
-                margin-left: 10rem;
-            }
-            .carrusel-img{
-                justify-content: center;
-            }
-            .carrusel-btn{
-                background-color: #fff6;
-                border:1px solid #fff;
-                height: 35rem;
-                max-height: none;
-                width: 10rem;
-            }
-            .form-container{
-                border: 1px solid #ddd;
-                background-color: #686D76;
-                width: 35rem;
-                justify-content: center;
-                margin-bottom: 1rem;
-            }
-            .form-container h2,p{
-                text-align: center;
-                color: #fff;
-                letter-spacing: 2px;
-            }
-            .form-container p{
-                font-size: 1.5em;
-            }
-            .form-input, .form-textarea{
-                width: 30rem;
-                margin-left: 2rem;
                 letter-spacing: 1px;
-                font-size: 1.2em;
-                height: auto;
-                max-width: auto;
             }
-            .form-label{
-                font-size: 1.5em;
-                letter-spacing: 2px;
-                margin-left: 2rem;
-            }
-            .form-btn{
-                text-align: center;
-                margin-left: 12rem;
-                width: 10rem;
-                max-width: auto;
-                height: 3rem;
-                max-height: auto;
-                font-size: 1.4em;
-                letter-spacing: 2px;
-            }
-            .ficha-container{
-                border-radius: 10px;
-                margin-top: 2rem;
-                padding: 1rem;
-            }
-            .ficha-container h2{
-                text-align: center;
-                color: #fff;
-                padding: 1rem;
-                font-size: 3em;
-                text-decoration: underline;
-                letter-spacing: 2px;
-            }
-            .table{
-                border-radius: 10px;
-                font-size: 1.6em;
-                border: 1px solid #ddd;
-            }
-            .table tr{
-                width: 15rem;
-                background-color: transparent;
-            }
-            .table th{
-                letter-spacing: 3px;
-                color: #fff;
-                font-weight: 300;
-                border-bottom: 1px solid #ddd;
-                background-color: transparent;
-            }
-            .table td{
-                background-color: transparent;
-                letter-spacing: 3px;
-                color: #fff;
-            }
-            .img-mobile-box{
-                display: none;
-            }
+    .auto-card {
+        width: 100%; /* Ocupar todo el espacio de su celda */
+        box-sizing: border-box;
+    }
+    .grid-catalogo{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        gap: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .filtros-catalogo {
+    padding: 1.5rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+}
+.filtro-grupo {
+    margin-bottom: 2rem;
+}
+    .filtro-titulo {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.filtros-catalogo label {
+    display: block;
+    font-size: 1rem;
+    margin: 0.4rem 0;
+}
+.filtros-catalogo input[type="radio"] {
+    margin-right: 0.5rem;
+}
+.auto-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+.auto-nombre {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+/* Botón */
+.btn-ficha {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+}
+    /*FICHAS TÉCNICAS*/
+    .ficha-titulo{
+        margin-top: 10rem;
+        font-size: 4.5rem;
+    }
+    .carrusel-imagenes{
+        width: 100%;
+        margin-top: 1rem;
+        max-width: none;
+        height: 33rem;
+    }
+    .carrusel-img-box{
+        width: 45rem;
+        max-height: 33rem;
+        margin-left: 10rem;
+    }
+    .carrusel-img{
+        width: 100%;
+        justify-content: center;
+        object-fit: cover;
+    }
+    .carrusel-btn{
+        height: auto;
+        max-height: 33rem;
+        width: 10rem;
+    }
+    .form-container{
+        padding: 1rem;
+        border-radius: 10px;
+        width: 25rem;
+        border: 1px solid red;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .form-container p{
+        font-size: 1.5em;
+    }
+    .form-input, .form-textarea{
+        width: 100%;
+        border: 1px solid black;
+        letter-spacing: 1px;
+        font-size: 1.2em;
+        height: auto;
+        max-width: auto;
+    }
+    .form-label{
+        font-size: 1.5em;
+        margin-left: 2rem;
+    }
+    .form-btn{
+        margin-left: 12rem;
+        width: 10rem;
+        max-width: auto;
+        height: 3rem;
+        max-height: auto;
+        font-size: 1.4em;
+    }
+    .img-mobile-box{
+        display: none;
+    }
+    .ficha-tecnica{
+        display:grid;
+        grid-template-columns:250px, 1fr;
+        padding: 2rem;
+        margin: 5rem 0 2rem 0;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        max-height: none;
+        .ficha-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+            gap: 1rem;
+            padding: 1rem;
+            width: 50rem;
+            max-width: none;
+            border-radius: 8px;
+        }
+        .ficha-title{
+            margin-left: 50%;
+            width: 100%;
+        }
+        .ficha-item {
+            width: 20rem;
+            max-width: none;
+            padding: 1rem;
+            font-size: 2rem;
+        }
+    }
+/*NOSOTROS.HTML*/
+.seccion-historia{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        gap: 1rem;
+        padding: 1rem;
+        align-items: center;
+}
+    .historia-box{
+        justify-content: center;
+        pad: 1rem;
+    }
+    .img-container{
+        margin-top: 2rem;
+        padding: 1rem;
+        width: 40rem;
+        height: auto;
+        max-width: none;
+        }
+        .historia-img{
+        object-fit: fill;
+        max-width: 39rem;
+        padding: 1rem;
+        margin: 0 auto;
+        }
+        .historia-card{
+            margin-top: 2rem;
+            width: 100%;
+            max-width: none;
+            height: auto;
+            padding: 2rem;
+        }
+        .historia-h{
+            font-size: 1.5rem !important;
+        }
+        .historia-p{
+            font-size: 1.2rem !important;
+        }
+        .historia-final{
+            font-size: 1.5rem;
+            width: 100%;
+        }
+        .historia-section-final{
+            width: 100%;
+        }
+        .nosotros-box{
+            margin: 8rem 0 5rem 0;
+            width: 100%;
+            padding: 3.5rem;
+        }
+        .nosotros-h{
+            font-size: 1.5rem;
+        }
+        .nosotros-p{
+            font-size: 0.8rem;
+        }
 }
 /*DESKTOP 2*/
-@media(min-width:1401px){
+@media(min-width:1280px){
     /*BODY,NAVBAR Y CONTENIDO MAIN*/
     body{
         display: flex;
@@ -463,33 +492,47 @@
         margin: 0;
         padding: 0;
     }
-    #navbar-menu{
-        font-size: 1.5rem;
-        height: 5rem;
-        padding:3.5rem 0 3.5rem 0;
-        font-weight: 500;
-            #navbar-img{
-            max-width: 7rem;
-            }
-            #ul-navbar{
-            margin:0vh 0vw 0vh 5vw;
-            padding: 1vh 1vw 1vh 1vw;
-            width: 55rem;
-            max-width: none;
-            justify-content: space-around;
-            gap: 1rem;
-            }
+    #navbar-img{
+        max-width: 5rem;
     }
-    /*CARROUSEL*/
-    #contenedor-banner{
-        height: 85vh;
-        #banner-img{
-            height: 85vh;
-            object-fit: cover;
-        }
+    #navbar-menu{
+        width: 100%;
+        max-width: none;
+        height: 5rem;
+    }
+    #ul-navbar{
+        width: 40rem;
+        justify-content: space-around;
+        max-width: none;
+        gap: 0.5rem;
+    }
+    .navbar-link{
+        font-size: 1.8rem;
     }
     #search-text{
-        width: 30rem;
+        width: 17rem;
+        max-width: none;
+        height: auto;
+    }
+    .form-busqueda{
+        margin-right: 10rem;
+    }
+    /*CARROUSEL*/
+    #banner{
+        width: 100%;
+    }
+    #contenedor-banner{
+        height: 85vh;
+        margin-top: 10rem;
+        width: 100%;
+        }
+        #banner-img{
+            height: 85vh;
+            width: 100%;
+            object-fit: cover;
+        }
+    #search-text{
+        width: 25rem;
         font-size: 1.3rem;
         height: auto;
         max-width: none;
@@ -556,11 +599,12 @@
     }
     .seccion-busqueda{
         @include flex-wrap;
-        width: 57rem;
         max-width: none;
         height: auto;
         margin: 5vh 0vw 5vh 25vw;
         padding: 1.5rem;
+        width: 100%;
+    }
         #txt-busqueda{
             max-width: none;
             width: 100%;
@@ -576,7 +620,7 @@
             color: #fff;
             font-size: 2rem;
         }
-    }
+    
     #titulo-seccion{
         text-align: center;
         padding: 1rem;
@@ -645,9 +689,10 @@
         min-width: 100%;
         background-color: #fff;
         margin:0;
-        padding: 2.5rem;
+        padding: 1.5rem;
         color: #000;
         text-align: left;
+        }
         .footer-navbar{
             width: 100%;
             max-width: none;
@@ -674,38 +719,40 @@
             margin: 1rem 0 0 2rem;
             @include flex-wrap;
             justify-content: flex-start;
-            width: 60rem;
+            width: 45rem;
             text-align: center;
         }
         .list-section{
-            min-width: 150px;
+            width: 5rem;
             flex: 1 1 100px;
             list-style: none;
             padding: 0;
             margin-right: 0rem;
         }
         .footer-h{
-            font-size: 1.8rem;
+            font-size: 1.4rem;
+            width: 15rem;
             margin-bottom: 0.5rem;
             }
         .list-section ul{
             list-style: none;
-            padding: 0;
-            margin: 0.5rem 0 0 0;
+            width: 15rem;
+            padding: 0.5rem;
+            margin: 0;
         }
         .list-link{
-            margin-bottom: 0.4rem;
-            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
             transition: color 0.3s ease;
         }
         .footer-redes{
-            width: 22rem;
+            width: 15rem;
             margin: 0.5rem 0 0.5rem 1rem;
         }
         .footer-redes-h{
             text-align: center;
-            font-size: 2.1rem;
-            margin:0.5rem 0 0.5rem 5rem;
+            font-size: 1.4rem;
+            margin:0.5rem 0 0.5rem 0;
         }
         .footer-redes-li{
             list-style: none;
@@ -713,116 +760,82 @@
             justify-content: space-around;
             max-width: none;
             height: auto;
-            width: 19rem;
+            width: 12rem;
             padding: 0 1rem 1rem 1rem;
-            margin-left: 3rem;
         }
         .footer-redes-img{
             width: 35px;
             max-width: none;
         }
-    }
-    /*NUEVOS.HTML*/
+    
+    /*DEPORTIVOS.HTML*/
     .seccion-catalogo{
-        margin: 0;
+        @include flex-wrap;
+        width: 100%;
+    }
+    .grid-catalogo{
         display: grid;
-        grid-template-columns: 25rem 1fr;
-        gap: 2rem;
-        padding: 0 1rem 1rem 0;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+        justify-content: space-between;
+        width: 65rem;
+        max-width: 1200px;
+        padding: 1rem;
     }
     .main-h{
         margin: 20vh auto 0 auto;
         font-size: 3.8rem;
-        color: #fff;
         width: 75rem;
         padding: auto;
         letter-spacing: 2px;
         text-align: center;
     }
-    .filtros-busqueda{
-        width: 25rem;
-        max-width: 100vh;
-        overflow-y: auto;
-        padding-right: 10px;
-        padding: 2.5rem;
-        background-color:#686D76;
-        border: 1px solid #fff;
-        position: sticky;
-        top: 0;
-        gap: 3rem;
-        height: 100vh;
-        margin-left:0;
-    }
-    .filtros-busqueda h3{
-        text-align: center;
-        font-size: 1.8rem;
-        color: #fff;
-        text-decoration:underline;
-    }
-    .filtro{
-        margin-bottom: 2rem;
-    }
-    .filtro h4{
-        margin-bottom: 0.5rem;
-        font-size: 1.8em;
-        padding-bottom: 0.3rem;
-        text-align: center;
-        text-decoration: underline;
-    }
-    #label-filtro{
-        font-size: 1.4em;
-    }
-    .seccion-cards{
-        @include flex-wrap;
-        flex-direction: row;
-        gap: 1rem;
-    }
-    .card-box{
-        width: 22rem;
-        max-width: none;
-        height: 26rem;
-    }
-    .carta-catalogo{
-        flex: 1 1 250px;
-        width: 20rem;
-        max-width: none;
-        height: 25rem;
-        margin-left: 0;
-        max-height: none;
-        border-radius: 10px;
-        text-align: center;
-    }
-    .carta-catalogo a{
-        text-decoration: none;
-        color: #000;
-    }
-    .card-img{
-        border-radius: 10px 10px 0px 0px;
-        border-bottom: 2px solid #000;
-    }
-    .titulo-carta{
-        font-size: 2em;
-        letter-spacing: 2px;
-    }
-    .card-list{
-        height: 136px;
-        margin-left: 20px;
-        text-align: start;
-        max-height: none;
-        padding: 20px;
-    }
-    .card-list-item{
-        font-size: 1.4em;
-        letter-spacing: 2px;
-    }
-    .btn-acordeon{
-        font-size: 1em;
-    }
+    .filtros-catalogo {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+}
+.filtro-grupo {
+    margin-bottom: 2rem;
+}
+    .filtro-titulo {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.filtros-catalogo label {
+    display: block;
+    font-size: 1rem;
+    margin: 0.4rem 0;
+}
+.filtros-catalogo input[type="radio"] {
+    margin-right: 0.5rem;
+}
+    .auto-card {
+    height: 20rem;
+    width: 20rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+.auto-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+.auto-nombre {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #222;
+}
+/* Botón */
+.btn-ficha {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+}
     /*FICHAS TÉCNICAS*/
     .ficha-titulo{
         margin-top: 10rem;
-        text-align: center;
-        color: #fff;
         font-size: 6rem;
     }
     .carrusel-imagenes{
@@ -838,35 +851,28 @@
         margin-left: 15.1rem;
     }
     .carrusel-img{
+        width: 100%;
         justify-content: center;
+        object-fit: cover;
     }
     .carrusel-btn{
-        background-color: #fff6;
-        border:1px solid #fff;
         height: 35rem;
         max-height: none;
         width: 15rem;
     }
     .form-container{
-        border: 1px solid #ddd;
         padding: 1rem;
         border-radius: 10px;
-        background-color: #686D76;
-        width: 35rem;
+        width: 25rem;
+        border: 1px solid red;
         justify-content: center;
         margin-bottom: 1rem;
-    }
-    .form-container h2,p{
-        text-align: center;
-        color: #fff;
-        letter-spacing: 2px;
     }
     .form-container p{
         font-size: 1.5em;
     }
     .form-input, .form-textarea{
-        width: 30rem;
-        margin-left: 2rem;
+        width: 100%;
         border: 1px solid black;
         letter-spacing: 1px;
         font-size: 1.2em;
@@ -874,117 +880,98 @@
         max-width: auto;
     }
     .form-label{
-        color: #fff;
         font-size: 1.5em;
-        letter-spacing: 2px;
-        text-decoration: underline;
         margin-left: 2rem;
     }
     .form-btn{
-        text-align: center;
         margin-left: 12rem;
         width: 10rem;
         max-width: auto;
         height: 3rem;
         max-height: auto;
         font-size: 1.4em;
-        letter-spacing: 2px;
     }
     .img-mobile-box{
         display: none;
     }
     .ficha-tecnica{
         display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
         padding: 2rem;
-        margin-top: 5rem;
+        margin: 5rem 0 2rem 0;
         width: 100%;
         max-width: none;
-        height: 45rem;
+        height: auto;
         max-height: none;
         .ficha-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
             gap: 1rem;
-            background: #f5f5f5;
             padding: 1rem;
-            width: 35rem;
+            width: 50rem;
             max-width: none;
             border-radius: 8px;
         }
         .ficha-title{
-            text-align: center;
             margin-left: 50%;
             width: 100%;
         }
         .ficha-item {
-            width: 16rem;
+            width: 20rem;
             max-width: none;
-            background: #fff;
             padding: 1rem;
-            border: 1px solid black;
-            border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
     }
     /*NOSOTROS.HTML*/
-    .seccion-intro{
-        width: 100%;
-        padding: 1rem;
-        max-width: none;
-        justify-content: center;
-        margin: 10rem 0 5rem 0rem;
-            .seccion-h{
-        font-size: 3.5rem;
-    }
-    .seccion-p{
-        font-size: 2rem;
-    }
-    }
-    /*NOSOTROS.HTML*/
-    .historia-section{
-        @include flex-wrap;
-        padding: 3rem;
-    }
     .historia-box{
         @include flex-wrap;
         width: 100%;
-        justify-content: space-between; /* o space-between, según quieras */
         align-items: center;
-        gap: 1rem;
+        padding: 1.5rem;
     }
     .img-container{
-        width: 45rem;
+        width: 2rem;
         height: auto;
         justify-content: center;
         max-height: none;
         max-width: none;
+        }
         .historia-img{
-        width: 100%;
-        max-width: none;
+        max-width: 100%;
+        padding: 1rem;
         object-fit: fill;
         height: auto;
-        padding: 2rem;
         margin: 0 auto;
         }
         .img-container,.historia-card{
         flex: 1 1 300px; /* Crece, reduce, base mínima */
-        max-width: 50%;  /* Para que no se pase de la mitad */
         box-sizing: border-box;
         }
         .historia-card{
-            height: 20rem;
+            height: auto;
         }
         .historia-final{
             font-size: 2rem;
-            width: 20rem;
+            width: 100%;
         }
-    }
+        .historia-section-final{
+            width: 100%;
+        }
+        .nosotros-box{
+            margin: 8rem 0 5rem 0;
+            width: 100%;
+            padding: 3.5rem;
+        }
+        .nosotros-h{
+            font-size: 2.5rem !important;
+        }
+        .nosotros-p{
+            font-size: 2rem !important;
+        }
 }
 /*MOBILE*/
-@media (min-width:300px) and (max-width:500px){
+@media (min-width:300px) and (max-width:480px){
     /*PONIENDO CADA SECCION DEL INDEX EN GRID*/
     body{
         margin: 0;
@@ -998,7 +985,8 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.5rem;
-        justify-content: center;
+        width: 100%;
+        align-items: center;
     }
     .footer-navbar{
         display: grid;
@@ -1038,8 +1026,8 @@
         text-align: center;
     }
     #access-card{
-        width: 18rem;
-        margin-left: 0.3rem;
+        width: 100%;
+        margin-left: 0;
         max-height: none;
         max-width: none;
         text-align: center;
@@ -1057,6 +1045,7 @@
     /*SECCIÓN DE BÚSQUEDA*/
     .seccion-busqueda{
         @include flex-wrap;
+        width: 100%;
         text-align: center;
         gap: 1.5rem;
     }
@@ -1066,7 +1055,7 @@
     }
     .box{
         padding: 1rem;
-        width: 18rem;
+        width: 100%;
         max-width: none;
         height: auto;
     }
@@ -1078,9 +1067,10 @@
         margin:0;
     }
         .seccion-box{
-        width: 18rem;
+        width: 100%;
         padding: 1rem;
         margin: 2rem 0 2rem 0.3rem;
+        max-width: none;
         .ingresos-h3{
             font-size: 1.5rem;
         }
@@ -1099,7 +1089,7 @@
         .ingresos-box{
             background-color: #fff;
             border-radius: 20px;
-            width: 18rem;
+            width: 100%;
             margin-left: 0.3rem;
         }
     .ingresos-img{
@@ -1196,94 +1186,50 @@
     margin: 0;
     padding: 0;
 }
-    /*NUEVOS.HTML*/
-    .main-h{
-        font-size: 2em;
-        margin-top: 4rem;
-        color: #fff;
-        text-align: center;
+/*DEPORTIVOS.HTML*/
+.main-h{
+    margin-top: 5rem;
+    font-size: 1.5rem;
+}
+.seccion-catalogo {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        align-items: center;
+        gap: 2rem;
     }
-    .seccion-cards{
+    .auto-card{
+        width: 16rem;
+        height: 18rem;
+    }
+    .filtros-catalogo {
+        order: -1;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+    }
+    .grid-catalogo {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: 1fr; /* Una columna en mobile */
+        gap: 3rem;
     }
-    .filtros-busqueda{
-            width: 100%;
-            max-width: none;
-            overflow-y: auto;
-            padding: 1rem;
-            background-color:#686D76;
-            border: 1px solid #fff;
-            height: auto;
-            margin-left:0;
-        }
-        .seccion-catalogo{
-            margin: 0;
-            display: grid;
-            gap: 2rem;
-            padding: 0 1rem 1rem 0;
-        }
-        .filtros-busqueda h3{
-            text-align: center;
-            font-size: 1.8rem;
-            color: #fff;
-            text-decoration:underline;
-        }
-        .filtro{
-            margin-bottom: 2rem;
-        }
-        .filtro h4{
-            margin-bottom: 0.5rem;
-            font-size: 1.8em;
-            padding-bottom: 0.3rem;
-            text-align: center;
-            text-decoration: underline;
-        }
-        #label-filtro{
-            font-size: 1.4em;
-        }
-        .card-box{
-            width: 100%;
-            max-width: none;
-            height: auto;
-        }
-        .carta-catalogo{
-            flex: 1 1 250px;
-            width: 100%;
-            max-width: none;
-            height: auto;
-            margin-left: 0;
-            max-height: none;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .carta-catalogo a{
-            text-decoration: none;
-            color: #000;
-        }
-        .card-img{
-            border-radius: 10px 10px 0px 0px;
-            border-bottom: 2px solid #000;
-        }
-        .titulo-carta{
-            font-size: 1.4em;
-            letter-spacing: 1.5px;
-        }
-        .card-list{
-            height: 136px;
-            margin-left: 20px;
-            text-align: start;
-            max-height: none;
-            padding: 20px;
-        }
-        .card-list-item{
-            font-size: 1.4em;
-            letter-spacing: 2px;
-        }
-        .btn-acordeon{
-            font-size: 1em;
-        }
+    .auto-img {
+        width: 15rem;
+        height: 15rem;
+        padding: 1rem;
+    }
+    .auto-nombre {
+        font-size: 1rem;
+    }
+    .btn-ficha {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    .filtro-titulo {
+        font-size: 1rem;
+    }
+    .filtros-catalogo label {
+        font-size: 0.95rem;
+    }
         /*FICHA-TECNICA*/
         .ficha-titulo{
             margin-top: 5rem;
@@ -1331,8 +1277,7 @@
             font-size: 1.2em;
         }
         .form-input, .form-textarea{
-            width: auto;
-            margin-left: 1rem;
+            width: 100%;
             border: 1px solid black;
             letter-spacing: 1px;
             font-size: 1em;
@@ -1348,53 +1293,74 @@
         }
         .form-btn{
             text-align: center;
-            margin-left: 3rem;
-            width: 5rem;
+            width: 10rem;
             max-width: auto;
             height: 2rem;
             max-height: auto;
             font-size: 1.2em;
             letter-spacing: 2px;
         }
-        .ficha-container{
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #686D76;
-            margin-top: 1rem;
-            padding: 1rem;
+        .ficha-tecnica {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+}
+.ficha-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.ficha-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.ficha-item {
+    font-size: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+        /*NOSOTROS.HTML*/
+        .historia-box,.seccion-historia{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 3rem;
+        align-items: center;
+        width: 100%;
+        max-width: none;
         }
-        .ficha-container h2{
-            text-align: center;
-            color: #fff;
-            padding: 1rem;
-            font-size: 2em;
-            text-decoration: underline;
-            letter-spacing: 2px;
+        .historia-card{
+            width: 100%;
         }
-        .table{
-            border-radius: 10px;
-            font-size: 1.2em;
-            border: 1px solid #ddd;
+        .historia-h{
+            font-size: 1.2rem !important;
         }
-        .table tr{
-            width: 10rem;
-            background-color: transparent;
+        .historia-p{
+            font-size: 1rem !important;
+        } 
+        #p-final{
+            font-size: 0.8 !important;
         }
-        .table th{
-            letter-spacing: 3px;
-            color: #fff;
-            font-weight:normal;
-            border-bottom: 1px solid #ddd;
-            background-color: transparent;
+        
+            .historia-img{
+            margin-left: 0.5rem;
+            width: 14rem;
+            margin-top: 0.5rem;
+            height: auto;
         }
-        .table td{
-            background-color: transparent;
-            letter-spacing: 3px;
-            color: #fff;
+            img-container{
+            margin-left: 0.5rem !important;
+            width: 17rem;
+            height: auto;
+        }
+            .nosotros-box{
+            margin-top: 5rem;
         }
     }
 /*TABLET*/
-@media (min-width:501px) and (max-width:1000px){
+@media (min-width:481px) and (max-width:768px){
     /*PONIENDO CADA SECCION DEL INDEX EN GRID*/
     body{
         margin: 0;
@@ -1611,200 +1577,190 @@
     margin: 0;
     padding: 0;
 }
-    /*NUEVOS.HTML*/
-    .main-h{
-        font-size: 2em;
-        margin-top: 4rem;
-        color: #fff;
-        text-align: center;
+/*DEPORTIVOS.HTML*/
+.main-h{
+    margin-top: 5rem;
+}
+.seccion-catalogo {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.5rem;
     }
-    .seccion-cards{
+    .filtros-catalogo{
+        align-items: center;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+    .grid-catalogo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .auto-card{
+        width: 20rem;
+        height: 25rem;
+        max-width: none;
+        padding: 1rem;
+    }
+    .auto-img {
+        width: 18rem;
+        height: 15rem;
+        margin-bottom: 0.8rem;
+    }
+    .auto-nombre {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+    .btn-ficha {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .filtro-titulo {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .filtros-catalogo label {
+        font-size: 1.8rem;
+    }
+    .filtros-catalogo input[type="radio"] {
+        width: 3rem;
+}
+/*FICHA TÉCNICA*/
+#main-ficha{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+}
+.ficha-titulo {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 5rem;
+}
+ /* Carrusel */
+.carrusel-imagenes {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.carrusel-img {
+    width: 75%;
+    margin-left: 5rem;
+    height: auto;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    display: block !important;
+    z-index: 10;
+    opacity: 1 !important;
+}
+  /* Ficha técnica */
+.ficha-tecnica {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+}
+.ficha-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.ficha-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.ficha-item {
+    font-size: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+  /* Formulario */
+.form-container {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+}
+.form-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+.form-container p {
+    margin-bottom: 1rem;
+}
+.form-input,
+.form-textarea {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+}
+.form-btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+/*NOSOTROS.HTML*/
+.seccion-historia{
+        margin-top: 3rem;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        margin: 0 auto;
+        gap: 1rem;
+        padding: 1rem;
+}
+    .historia-box{
+        justify-content: start;
+        padding: 1rem;
+        width: 100%;
     }
-    .filtros-busqueda{
-            width: 100%;
-            max-width: none;
-            overflow-y: auto;
-            padding: 1rem;
-            background-color:#686D76;
-            border: 1px solid #fff;
-            height: auto;
-            margin-left:0;
+    .img-container{
+        margin:2rem 0 0 1rem;
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+        max-width: none;
         }
-        .seccion-catalogo{
-            margin: 0;
-            display: grid;
-            gap: 2rem;
-            padding: 0 1rem 1rem 0;
+        .historia-img{
+        object-fit: fill;
+        max-width: 39rem;
+        padding: 1rem;
+        margin: 0 auto;
         }
-        .filtros-busqueda h3{
-            text-align: center;
-            font-size: 1.8rem;
-            color: #fff;
-            text-decoration:underline;
-        }
-        .filtro{
-            margin-bottom: 2rem;
-        }
-        .filtro h4{
-            margin-bottom: 0.5rem;
-            font-size: 1.8em;
-            padding-bottom: 0.3rem;
-            text-align: center;
-            text-decoration: underline;
-        }
-        #label-filtro{
-            font-size: 1.4em;
-        }
-        .card-box{
-            width: 100%;
+        .historia-card{
+            margin-top: 2rem;
+            width: 220%;
             max-width: none;
             height: auto;
+            padding: 2rem;
         }
-        .carta-catalogo{
-            flex: 1 1 250px;
+        .historia-h{
+            font-size: 1.5rem !important;
+        }
+        .historia-p{
+            font-size: 1.2rem !important;
+        }
+        .historia-final{
+            font-size: 1.5rem;
             width: 100%;
-            max-width: none;
-            height: auto;
-            margin-left: 0;
-            max-height: none;
-            border-radius: 10px;
-            text-align: center;
         }
-        .carta-catalogo a{
-            text-decoration: none;
-            color: #000;
-        }
-        .card-img{
-            border-radius: 10px 10px 0px 0px;
-            border-bottom: 2px solid #000;
-        }
-        .titulo-carta{
-            font-size: 1.4em;
-            letter-spacing: 1.5px;
-        }
-        .card-list{
-            height: 136px;
-            margin-left: 20px;
-            text-align: start;
-            max-height: none;
-            padding: 20px;
-        }
-        .card-list-item{
-            font-size: 1.4em;
-            letter-spacing: 2px;
-        }
-        .btn-acordeon{
-            font-size: 1em;
-        }
-        /*FICHA-TECNICA*/
-        .ficha-titulo{
-            margin-top: 5rem;
-            text-align: center;
-            color: #fff;
-            font-size: 2.1em;
-        }
-        .carrusel-imagenes{
-            display: none;
-        }
-        .galeria-mobile{
-            background-color: #686D76;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-        .galeria-mobile img{
+        .historia-section-final{
             width: 100%;
-            height: auto;
-            object-fit: cover;
         }
-        .galeria-mobile h3{
-            text-align: center;
-            letter-spacing: 2px;
-            color: #fff;
-            padding: 5px;
-            text-decoration: underline;
-            font-size: 1.4em;
+        .nosotros-box{
+            margin: 8rem 0 5rem 0;
+            width: 100%;
+            padding: 3.5rem;
         }
-        .form-container{
-            border: 1px solid #ddd;
-            padding: 1rem;
-            border-radius: 10px;
-            background-color: #686D76;
-            width: 15rem;
-            justify-content: center;
-            margin-bottom: 1rem;
+        .nosotros-h{
+            font-size: 1.5rem;
         }
-        .form-container h2,p{
-            text-align: center;
-            color: #fff;
-            letter-spacing: 1.5px;
-        }
-        .form-container p{
-            font-size: 1.2em;
-        }
-        .form-input, .form-textarea{
-            width: auto;
-            margin-left: 1rem;
-            border: 1px solid black;
-            letter-spacing: 1px;
-            font-size: 1em;
-            height: auto;
-            max-width: auto;
-        }
-        .form-label{
-            color: #fff;
-            font-size: 1.2em;
-            letter-spacing: 1px;
-            text-decoration: underline;
-            margin-left: 1rem;
-        }
-        .form-btn{
-            text-align: center;
-            margin-left: 3rem;
-            width: 5rem;
-            max-width: auto;
-            height: 2rem;
-            max-height: auto;
-            font-size: 1.2em;
-            letter-spacing: 2px;
-        }
-        .ficha-container{
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #686D76;
-            margin-top: 1rem;
-            padding: 1rem;
-        }
-        .ficha-container h2{
-            text-align: center;
-            color: #fff;
-            padding: 1rem;
-            font-size: 2em;
-            text-decoration: underline;
-            letter-spacing: 2px;
-        }
-        .table{
-            border-radius: 10px;
-            font-size: 1.2em;
-            border: 1px solid #ddd;
-        }
-        .table tr{
-            width: 10rem;
-            background-color: transparent;
-        }
-        .table th{
-            letter-spacing: 3px;
-            color: #fff;
-            font-weight:normal;
-            border-bottom: 1px solid #ddd;
-            background-color: transparent;
-        }
-        .table td{
-            background-color: transparent;
-            letter-spacing: 3px;
-            color: #fff;
+        .nosotros-p{
+            font-size: 0.8rem;
         }
 }
