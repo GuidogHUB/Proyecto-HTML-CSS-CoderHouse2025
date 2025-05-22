@@ -601,9 +601,10 @@
         @include flex-wrap;
         max-width: none;
         height: auto;
-        margin: 5vh 0vw 5vh 25vw;
+        margin: 5vh 0vw 5vh 0;
+        margin-left: 15rem;
         padding: 1.5rem;
-        width: 100%;
+        width: 70%;
     }
         #txt-busqueda{
             max-width: none;
