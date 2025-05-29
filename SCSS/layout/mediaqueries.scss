@@ -482,6 +482,72 @@
         .nosotros-p{
             font-size: 0.8rem;
         }
+                /*FINANCIAMIENTO.HTML*/
+    .hero {
+        font-size: 1.8rem;
+        padding: 4rem 1rem;
+        margin-top: 7rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .container-section{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 4rem;
+        padding: 2rem;
+    }
+    .container{
+        margin: 2rem auto  4rem auto;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+    .section-title{
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+    }
+    .cartas-grupo{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+    .carta{
+        padding: 1.5rem;
+    }
+    .carta-p{
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    .beneficios-grupo{
+        @include flex-wrap;
+        padding: 2rem;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+    .beneficio{
+        flex: 1 1 200px;
+        padding: 1rem;
+    }
+    .seccion-form{
+        padding: 3rem 1rem;
+    }
+    .formulario{
+        display: grid;
+        gap: 1rem;
+        max-width: 700px;
+        margin: auto;
+    }
+    .form-input, .form-select{
+        padding: 0.8rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+    .form-button{
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
 }
 /*DESKTOP 2*/
 @media(min-width:1280px){
@@ -970,6 +1036,72 @@
         .nosotros-p{
             font-size: 2rem !important;
         }
+        /*FINANCIAMIENTO.HTML*/
+    .hero {
+        font-size: 1.8rem;
+        padding: 4rem 1rem;
+        margin-top: 7rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .container-section{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 4rem;
+        padding: 2rem;
+    }
+    .container{
+        margin: 2rem auto  4rem auto;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+    .section-title{
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+    }
+    .cartas-grupo{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+    .carta{
+        padding: 1.5rem;
+    }
+    .carta-p{
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    .beneficios-grupo{
+        @include flex-wrap;
+        padding: 2rem;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+    .beneficio{
+        flex: 1 1 200px;
+        padding: 1rem;
+    }
+    .seccion-form{
+        padding: 3rem 1rem;
+    }
+    .formulario{
+        display: grid;
+        gap: 1rem;
+        max-width: 700px;
+        margin: auto;
+    }
+    .form-input, .form-select{
+        padding: 0.8rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+    .form-button{
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
 }
 /*MOBILE*/
 @media (min-width:300px) and (max-width:480px){
@@ -1002,7 +1134,8 @@
     }
     /*SECCION HEADER Y NAVBAR*/
     #navbar-img,#footer-img{
-        max-width: 7rem;
+        width: 5rem;
+        max-width: none;
     }
     #navbar-menu{
         width: 99%;
@@ -1126,13 +1259,11 @@
         max-width: none;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
         padding: 0;
         text-align: center;
     }
     .list-section{
         padding: 0;
-        margin-right: 0rem;
     }
     .list-section ul{
         list-style: none;
@@ -1143,12 +1274,12 @@
     .list-link{
         text-decoration: none;
         color: #000;
-        font-size: 1.3rem;
+        font-size: 1rem;
         transition: color 0.3s ease;
     }
     .footer-h{
     max-width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     }
     .footer-line{
@@ -1163,8 +1294,8 @@
         max-width: none;
     }
     .footer-redes-li{
-        display: grid;
-        grid-template-columns: 1fr;
+        @include flex-wrap;
+        justify-content: space-around;
         gap: 1rem;
         max-width: none;
         height: auto;
@@ -1172,7 +1303,7 @@
     }
     .footer-redes-h{
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .footer-redes-img{
         width: 2rem;
@@ -1184,8 +1315,6 @@
 .list-section ul,
 .list-item,.footer-redes,.footer-redes-li{
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 /*DEPORTIVOS.HTML*/
 .main-h{
@@ -1359,6 +1488,38 @@
             .nosotros-box{
             margin-top: 5rem;
         }
+    /*FINANCIAMIENTO.HTML*/
+    .hero {
+        padding: 2rem 1rem;
+        margin-top: 4rem;
+    }
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    .cartas-grupo{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .beneficios-grupo{
+        flex-direction: column;
+        align-items: center;
+    }
+    .beneficio{
+        width: 100%;
+    }
+    .seccion-form{
+        padding: 1rem;
+    }
+    .formulario{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .form-input, .form-select,.form-button{
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
     }
 /*TABLET*/
 @media (min-width:481px) and (max-width:768px){
@@ -1534,11 +1695,11 @@
     .list-link{
         text-decoration: none;
         color: #000;
-        font-size: 1.8em;
+        font-size: 1.3rem;
         transition: color 0.3s ease;
     }
     .footer-h{
-    font-size: 2.1em;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     }
     .footer-line{
@@ -1553,9 +1714,9 @@
         max-width: none;
     }
     .footer-redes-li{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        @include flex-wrap;
+        justify-content: space-around;
+        gap: 1rem;
         list-style: none;
         max-width: none;
         height: auto;
@@ -1563,10 +1724,10 @@
     }
     .footer-redes-h{
         text-align: center;
-        font-size: 2.1rem;
+        font-size: 1.5rem;
     }
     .footer-redes-img{
-        width: 2.5rem;
+        width: 2rem;
         max-width: none;
     }
     .footer-list,
@@ -1575,8 +1736,6 @@
 .list-section ul,
 .list-item,.footer-redes,.footer-redes-li{
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 /*DEPORTIVOS.HTML*/
 .main-h{
@@ -1764,4 +1923,36 @@
         .nosotros-p{
             font-size: 0.8rem;
         }
+            /*FINANCIAMIENTO.HTML*/
+    .hero {
+        padding: 2rem 1rem;
+        margin-top: 4rem;
+    }
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    .cartas-grupo{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .beneficios-grupo{
+        flex-direction: column;
+        align-items: center;
+    }
+    .beneficio{
+        width: 100%;
+    }
+    .seccion-form{
+        padding: 1rem;
+    }
+    .formulario{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .form-input, .form-select,.form-button{
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
 }

@@ -295,81 +295,16 @@ filtros-catalogo label {
 }
 
 /*FINANCIAMIENTO.HTML*/
-.hero {
-  border: 2px solid goldenrod;
-  text-align: center;
-  border-radius: 20px;
-  color: #fff;
-  background: rgba(100, 100, 100, 0.5);
-}
-
 .highlight {
   color: goldenrod;
 }
 
-.carta:hover, .beneficio:hover {
+.carta:hover {
   transform: translateY(-5px);
-  transition: transform 0.3s;
-}
-
-.carta {
-  background: #f4f4f4;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-  justify-content: center;
-  text-align: center;
 }
 
 .form-button:hover {
   background: #333;
-}
-
-.section-title {
-  color: #fff;
-  text-align: center;
-  font-style: italic;
-}
-
-.carta-h, .beneficio h4 {
-  color: goldenrod;
-  text-shadow: -12px -2px 22px rgba(0, 0, 0, 0.45);
-}
-
-.carta-p {
-  color: #000;
-  justify-content: center;
-}
-
-.beneficios-grupo {
-  text-align: center;
-}
-
-.beneficio {
-  border-radius: 8px;
-  justify-content: center;
-  background: #f4f4f4;
-}
-
-.beneficio p {
-  color: #000;
-}
-
-.seccion-form {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.form-input, .form-select {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.form-button {
-  background: #111;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
 }
 
 /*MEDIA QUERIES*/
@@ -858,73 +793,6 @@ filtros-catalogo label {
   }
   .nosotros-p {
     font-size: 0.8rem;
-  }
-  /*FINANCIAMIENTO.HTML*/
-  .hero {
-    font-size: 1.8rem;
-    padding: 4rem 1rem;
-    margin-top: 7rem;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  .container-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 4rem;
-    padding: 2rem;
-  }
-  .container {
-    margin: 2rem auto 4rem auto;
-    justify-content: space-around;
-    padding: 2rem;
-  }
-  .section-title {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-  }
-  .cartas-grupo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  .carta {
-    padding: 1.5rem;
-  }
-  .carta-p {
-    font-size: 1.2rem;
-    padding: 1rem;
-  }
-  .beneficios-grupo {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2rem;
-    justify-content: space-around;
-    gap: 1rem;
-  }
-  .beneficio {
-    flex: 1 1 200px;
-    padding: 1rem;
-  }
-  .seccion-form {
-    padding: 3rem 1rem;
-  }
-  .formulario {
-    display: grid;
-    gap: 1rem;
-    max-width: 700px;
-    margin: auto;
-  }
-  .form-input, .form-select {
-    padding: 0.8rem;
-    font-size: 1rem;
-    width: 100%;
-  }
-  .form-button {
-    padding: 1rem 2rem;
-    font-size: 1rem;
   }
 }
 /*DESKTOP 2*/
@@ -1421,9 +1289,10 @@ filtros-catalogo label {
   }
   /*FINANCIAMIENTO.HTML*/
   .hero {
-    font-size: 1.8rem;
+    background-color: #111;
+    color: #fff;
     padding: 4rem 1rem;
-    margin-top: 7rem;
+    text-align: center;
   }
   .hero h1 {
     font-size: 2.5rem;
@@ -1433,17 +1302,11 @@ filtros-catalogo label {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    margin-top: 4rem;
-    padding: 2rem;
-  }
-  .container {
-    margin: 2rem auto 4rem auto;
-    justify-content: space-around;
-    padding: 2rem;
+    padding: 2rem 0;
   }
   .section-title {
+    text-align: center;
     margin-bottom: 2rem;
-    font-size: 2.5rem;
   }
   .cartas-grupo {
     display: grid;
@@ -1451,24 +1314,27 @@ filtros-catalogo label {
     gap: 2rem;
   }
   .carta {
+    background: #f4f4f4;
     padding: 1.5rem;
-  }
-  .carta-p {
-    font-size: 1.2rem;
-    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
   }
   .beneficios-grupo {
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem;
     justify-content: space-around;
     gap: 1rem;
+    text-align: center;
   }
   .beneficio {
     flex: 1 1 200px;
+    background: #f4f4f4;
     padding: 1rem;
+    border-radius: 8px;
   }
   .seccion-form {
+    background-color: #f4f4f4;
     padding: 3rem 1rem;
   }
   .formulario {
@@ -1479,12 +1345,20 @@ filtros-catalogo label {
   }
   .form-input, .form-select {
     padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     font-size: 1rem;
     width: 100%;
   }
   .form-button {
+    background: #111;
+    color: #fff;
     padding: 1rem 2rem;
     font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
   }
 }
 /*MOBILE*/
@@ -1518,8 +1392,7 @@ filtros-catalogo label {
   }
   /*SECCION HEADER Y NAVBAR*/
   #navbar-img, #footer-img {
-    width: 5rem;
-    max-width: none;
+    max-width: 7rem;
   }
   #navbar-menu {
     width: 99%;
@@ -1644,11 +1517,13 @@ filtros-catalogo label {
     max-width: none;
     display: grid;
     grid-template-columns: 1fr;
+    gap: 1rem;
     padding: 0;
     text-align: center;
   }
   .list-section {
     padding: 0;
+    margin-right: 0rem;
   }
   .list-section ul {
     list-style: none;
@@ -1659,12 +1534,12 @@ filtros-catalogo label {
   .list-link {
     text-decoration: none;
     color: #000;
-    font-size: 1rem;
+    font-size: 1.3rem;
     transition: color 0.3s ease;
   }
   .footer-h {
     max-width: 100%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
   .footer-line {
@@ -1679,9 +1554,8 @@ filtros-catalogo label {
     max-width: none;
   }
   .footer-redes-li {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
     max-width: none;
     height: auto;
@@ -1689,7 +1563,7 @@ filtros-catalogo label {
   }
   .footer-redes-h {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   .footer-redes-img {
     width: 2rem;
@@ -1701,6 +1575,8 @@ filtros-catalogo label {
   .list-section ul,
   .list-item, .footer-redes, .footer-redes-li {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
   /*DEPORTIVOS.HTML*/
   .main-h {
@@ -1872,38 +1748,6 @@ filtros-catalogo label {
   }
   .nosotros-box {
     margin-top: 5rem;
-  }
-  /*FINANCIAMIENTO.HTML*/
-  .hero {
-    padding: 2rem 1rem;
-    margin-top: 4rem;
-  }
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-  .cartas-grupo {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-  }
-  .beneficios-grupo {
-    flex-direction: column;
-    align-items: center;
-  }
-  .beneficio {
-    width: 100%;
-  }
-  .seccion-form {
-    padding: 1rem;
-  }
-  .formulario {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-  .form-input, .form-select, .form-button {
-    font-size: 1rem;
-    padding: 0.7rem;
   }
 }
 /*TABLET*/
@@ -2080,11 +1924,11 @@ filtros-catalogo label {
   .list-link {
     text-decoration: none;
     color: #000;
-    font-size: 1.3rem;
+    font-size: 1.8em;
     transition: color 0.3s ease;
   }
   .footer-h {
-    font-size: 1.5rem;
+    font-size: 2.1em;
     margin-bottom: 0.5rem;
   }
   .footer-line {
@@ -2099,10 +1943,9 @@ filtros-catalogo label {
     max-width: none;
   }
   .footer-redes-li {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     list-style: none;
     max-width: none;
     height: auto;
@@ -2110,10 +1953,10 @@ filtros-catalogo label {
   }
   .footer-redes-h {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2.1rem;
   }
   .footer-redes-img {
-    width: 2rem;
+    width: 2.5rem;
     max-width: none;
   }
   .footer-list,
@@ -2122,6 +1965,8 @@ filtros-catalogo label {
   .list-section ul,
   .list-item, .footer-redes, .footer-redes-li {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
   /*DEPORTIVOS.HTML*/
   .main-h {
@@ -2309,38 +2154,6 @@ filtros-catalogo label {
   .nosotros-p {
     font-size: 0.8rem;
   }
-  /*FINANCIAMIENTO.HTML*/
-  .hero {
-    padding: 2rem 1rem;
-    margin-top: 4rem;
-  }
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-  .cartas-grupo {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-  }
-  .beneficios-grupo {
-    flex-direction: column;
-    align-items: center;
-  }
-  .beneficio {
-    width: 100%;
-  }
-  .seccion-form {
-    padding: 1rem;
-  }
-  .formulario {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-  .form-input, .form-select, .form-button {
-    font-size: 1rem;
-    padding: 0.7rem;
-  }
 }
 .main-h {
   color: #fff;
@@ -2406,4 +2219,4 @@ filtros-catalogo label {
   background-color: #686D76;
 }
 
-/*# sourceMappingURL=estilos.css.map */
+/*# sourceMappingURL=estilos.css--watch.map */

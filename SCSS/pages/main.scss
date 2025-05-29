@@ -206,3 +206,67 @@ text-align: center;
     border-radius: 20px;
     background: rgba(256, 256, 256, 0.5);
 }
+/*FINANCIAMIENTO.HTML*/
+.hero{
+    border: 2px solid goldenrod;
+    text-align: center;
+    border-radius: 20px;
+    color:#fff;
+    background: rgba(100, 100, 100, 0.5);
+}
+    .highlight {
+        color:goldenrod;
+    }
+    .carta:hover,.beneficio:hover{
+        transform: translateY(-5px);
+        transition: transform 0.3s;
+    }
+    .carta{
+        background:#f4f4f4;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.08);
+        justify-content: center;
+        text-align: center;
+    }
+    .form-button:hover{
+        background: #333;
+    }
+    .section-title{
+        color: #fff;
+        text-align: center;
+        font-style: italic;
+    }
+    .carta-h,.beneficio h4{
+        color: goldenrod;
+        text-shadow: -12px -2px 22px rgba(0,0,0,0.45);
+    }
+    .carta-p{
+        color: #000;
+        justify-content: center;
+    }
+    .beneficios-grupo{
+        text-align: center;
+    }
+    .beneficio{
+        border-radius: 8px;
+        justify-content: center;
+        background: #f4f4f4;
+    }
+    .beneficio p{
+        color: #000;
+    }
+    .seccion-form{
+    background: rgba(256, 256, 256, 0.5);
+    }
+    .form-input, .form-select{
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .form-button{
+        background: #111;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
